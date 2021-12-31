@@ -1,7 +1,6 @@
 // Variable de stockage des données
 let fisheyeData = [];
 
-
 // Récuperation des données via le fichier JSON avec la méthode 'fetch'
 const fetchPhotographe = async () => {
     await fetch('../../data/photographers.json')
@@ -12,7 +11,6 @@ const fetchPhotographe = async () => {
     });
 
 }
-
 
 // Création dynamique des cartes de photographes avec les données récuperées ci dessus
 const photographeDisplay = async () => {
@@ -27,7 +25,7 @@ const photographeDisplay = async () => {
         <p class="index-description">
             <span class="index-location">${photographer.city}, ${photographer.country}</span>
             <span class="index-tagline">${photographer.tagline}</span>
-            <span class="index-price">${photographer.price}€</span>
+            <span class="index-price">${Math.round(photographer.price/8)}€/heure</span>
         <p>
     </article>    
     `
