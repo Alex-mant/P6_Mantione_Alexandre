@@ -51,25 +51,31 @@ h1 {
     object-fit: cover;
 }
 
-.index-description{
+.photographer_section.photographer_section article a{
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.index_description{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.index-location{
+.index_location{
     color: #901c1c;
     font-weight: bold;
     line-height: 20px;
     font-size: 16px;
 }
 
-.index-tagline{
+.index_tagline{
     font-size: 13px;
     line-height: 16px;
 }
 
-.index-price{
+.index_price{
     font-size: 12px;
     color: #757575;
     line-height: 14px;
