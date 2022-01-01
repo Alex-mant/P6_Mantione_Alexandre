@@ -1,6 +1,7 @@
-import { createModal } from './utils/CreateDynamicModal.js';
+import { createModal } from './CreateDynamicModal.js';
 
-const openModal = () => {
+/* OUVERTURE ET FERMETURE DU FORMULAIRE */
+export const openModal = () => {
     const btnOpenModal = document.querySelector(".contact_button");
     
     btnOpenModal.addEventListener("click", (event) => {
@@ -9,12 +10,10 @@ const openModal = () => {
     });
 }
 
-const closeModal = () => {
+export const closeModal = () => {
     const btnCloseModal = document.querySelector(".form_closeBtn");    
     btnCloseModal.addEventListener("click", () => {
         document.querySelector(".modal").style.display = "none";        
     });
 }
 
-openModal();
-closeModal();
