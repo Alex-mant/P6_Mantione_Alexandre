@@ -35,7 +35,7 @@ createModal = async () => {
     Récupère l'id envoyé dans l'url,
     traite les caractères inutiles
     et établi une recherche basé sur cette dernière
-    afin de renvoyé la valeur d'une clé voisine contenue dans ce même objet.
+    afin de renvoyé la valeur de name qui est une autre clé contenue dans ce même objet.
     */
    const getCurrentName = () =>{
        myId = window.location.search.split("?id=").join("");
