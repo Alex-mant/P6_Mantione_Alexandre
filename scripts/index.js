@@ -3,7 +3,7 @@ let fisheyeData = [];
 
 // Récuperation des données via le fichier JSON avec la méthode 'fetch'
 const fetchPhotographe = async () => {
-  await fetch("../../data/photographers.json")
+  await fetch("./data/photographers.json")
     .then((res) => res.json())
     // Stockage des données dans la variable créée au préalable 'fisheyeData'
     .then((promise) => {
@@ -20,6 +20,7 @@ const photographeDisplay = async () => {
     .map((photographer) =>
         `
     <article class="index_card">
+              <!-- envoi l'id dans l'url -->
         <a href="book.html?id=${photographer.id}">
             <img class="index_profile" alt="${photographer.name}" src="${photographer.portrait}"></img>
             <h2>${photographer.name}</h2>
