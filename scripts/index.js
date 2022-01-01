@@ -1,15 +1,5 @@
-// Variable de stockage des données
-let fisheyeData = [];
-
-// Récuperation des données via le fichier JSON avec la méthode 'fetch'
-const fetchPhotographe = async () => {
-  await fetch("./data/photographers.json")
-    .then((res) => res.json())
-    // Stockage des données dans la variable créée au préalable 'fisheyeData'
-    .then((promise) => {
-      fisheyeData = promise.photographers;
-    });
-};
+import {fisheyeData} from './utils/fetchPhotographe_objects.js'
+import {fetchPhotographe} from './utils/fetchPhotographe_objects.js'
 
 // Création dynamique des cartes de photographes avec les données récuperées ci dessus
 const photographeDisplay = async () => {

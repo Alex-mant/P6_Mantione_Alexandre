@@ -1,3 +1,6 @@
+import {fisheyeData} from './utils/fetchPhotographe_objects.js'
+import {fetchPhotographe} from './utils/fetchPhotographe_objects.js'
+
 const openModal = () => {
     const btnOpenModal = document.querySelector(".contact_button");
     
@@ -15,20 +18,8 @@ const closeModal = () => {
 }
 
 openModal();
-// Variable de stockage des données
-let fisheyeData = [];
 
-// Récuperation des données via le fichier JSON avec la méthode 'fetch'
-const fetchPhotographe = async () => {
-    await fetch("./data/photographers.json")
-    .then((res) => res.json())
-    // Stockage des données dans la variable créée au préalable 'fisheyeData'
-    .then((promise) => {
-        fisheyeData = promise.photographers;
-    });
-};
-
-createModal = async () => {
+const createModal = async () => {
     await fetchPhotographe();   
     
     /* getCurrentName :
@@ -38,7 +29,7 @@ createModal = async () => {
     afin de renvoyé la valeur de name qui est une autre clé contenue dans ce même objet.
     */
    const getCurrentName = () =>{
-       myId = window.location.search.split("?id=").join("");
+       const myId = window.location.search.split("?id=").join("");
        return fisheyeData.find(x => x.id == myId).name
     }    
     
