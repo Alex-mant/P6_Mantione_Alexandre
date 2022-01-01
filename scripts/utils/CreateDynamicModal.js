@@ -1,4 +1,3 @@
-import { closeModal } from '../modalForm.js'
 import { fisheyeData } from './fetchPhotographe_objects.js';
 import { fetchPhotographe } from './fetchPhotographe_objects.js';
 
@@ -13,39 +12,12 @@ export const createModal = async () => {
     */
    const getCurrentName = () =>{
        const myId = window.location.search.split("?id=").join("");
-       return fisheyeData.find(x => x.id == myId).name
+       return fisheyeData.find(photographer => photographer.id == myId).name
     }    
     
     document.querySelector(".modal").style.display = "block";
-    document.querySelector(".modal").innerHTML =
-
+    document.querySelector(".form_title").innerHTML =
+    `    
+        Contactez-moi </br>${getCurrentName()}          
     `
-    <div class="form_container">
-        <span class="form_closeBtn">
-            <img src="./assets/icons/close.svg" alt="">
-        </span>
-        <form action="">
-            <h2>Contactez-moi </br>${getCurrentName()}</h2>
-            <label for="">
-                <p class="form_text">Prénom</p>
-                <input class="form_input" type="text">
-            </label>
-            <label for="">
-                <p class="form_text">Nom</p>
-                <input class="form_input" type="text">
-            </label>
-            <label for="">
-                <p class="form_text">Email</p>
-                <input class="form_input" type="text">
-            </label>
-            <label for="">
-                <p class="form_text ">Votre message</p>
-                <textarea class="form_input message" type="text"></textarea>
-            </label>
-            </br></br>
-            <button class="form_submitBtn"type="submit">Envoyer</button>
-        </form>
-    </div>
-    `
-    closeModal();
 };

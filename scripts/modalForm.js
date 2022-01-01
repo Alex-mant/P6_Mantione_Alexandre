@@ -9,7 +9,7 @@ const openModal = () => {
     });
 }
 
-export const closeModal = () => {
+const closeModal = () => {
     const btnCloseModal = document.querySelector(".form_closeBtn");    
     btnCloseModal.addEventListener("click", () => {
         document.querySelector(".modal").style.display = "none";        
@@ -17,3 +17,4 @@ export const closeModal = () => {
 }
 
 openModal();
+closeModal();
