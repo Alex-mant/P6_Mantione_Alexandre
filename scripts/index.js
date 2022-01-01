@@ -1,5 +1,5 @@
-import {fisheyeData} from './utils/fetchPhotographe_objects.js'
-import {fetchPhotographe} from './utils/fetchPhotographe_objects.js'
+import { fisheyeData } from './utils/fetchPhotographe_objects.js'
+import { fetchPhotographe } from './utils/fetchPhotographe_objects.js'
 
 // Création dynamique des cartes de photographes avec les données récuperées ci dessus
 const photographeDisplay = async () => {

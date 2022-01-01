@@ -1,25 +1,8 @@
-import {fisheyeData} from './utils/fetchPhotographe_objects.js'
-import {fetchPhotographe} from './utils/fetchPhotographe_objects.js'
+import { closeModal } from '../modalForm.js'
+import { fisheyeData } from './fetchPhotographe_objects.js';
+import { fetchPhotographe } from './fetchPhotographe_objects.js';
 
-const openModal = () => {
-    const btnOpenModal = document.querySelector(".contact_button");
-    
-    btnOpenModal.addEventListener("click", (event) => {
-        event.preventDefault();
-        createModal();
-    });
-}
-
-const closeModal = () => {
-    const btnCloseModal = document.querySelector(".form_closeBtn");    
-    btnCloseModal.addEventListener("click", () => {
-        document.querySelector(".modal").style.display = "none";        
-    });
-}
-
-openModal();
-
-const createModal = async () => {
+export const createModal = async () => {
     await fetchPhotographe();   
     
     /* getCurrentName :
@@ -64,8 +47,5 @@ const createModal = async () => {
         </form>
     </div>
     `
-
     closeModal();
 };
-
-
