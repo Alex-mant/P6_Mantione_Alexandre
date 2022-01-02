@@ -1,5 +1,4 @@
-import { fisheyeData } from './fetchPhotographe_objects.js';
-import { fetchPhotographe } from './fetchPhotographe_objects.js';
+import { fisheyeData, fetchPhotographe} from './fetchPhotographe_objects.js';
 
 export const createFormModal = async () => {
     await fetchPhotographe();   
