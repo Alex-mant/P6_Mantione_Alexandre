@@ -1,19 +1,28 @@
-import { createModal } from './CreateDynamicModal.js';
+import { createFormModal } from './CreateDynamicModal.js';
 
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
-export const openModal = () => {
-    const btnOpenModal = document.querySelector(".contact_button");
+export const openForm = () => {
+    const btnOpenForm = document.querySelector(".contact_button");
     
-    btnOpenModal.addEventListener("click", (event) => {
+    btnOpenForm.addEventListener("click", (event) => {
         event.preventDefault();
-        createModal();
+        createFormModal();
     });
 }
 
-export const closeModal = () => {
-    const btnCloseModal = document.querySelector(".form_closeBtn");    
-    btnCloseModal.addEventListener("click", () => {
+export const closeForm = () => {
+    const btnCloseForm = document.querySelector(".form_closeBtn");    
+    btnCloseForm.addEventListener("click", () => {
         document.querySelector(".modal").style.display = "none";        
     });
 }
 
+/* SUBMITBUTTON */
+
+export const submitForm = () => {
+    const btnSubmitForm = document.querySelector(".form_submitBtn");
+    btnSubmitForm.addEventListener("click", (event)=>{
+        event.preventDefault();
+    });
+
+}

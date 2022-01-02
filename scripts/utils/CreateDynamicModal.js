@@ -1,7 +1,7 @@
 import { fisheyeData } from './fetchPhotographe_objects.js';
 import { fetchPhotographe } from './fetchPhotographe_objects.js';
 
-export const createModal = async () => {
+export const createFormModal = async () => {
     await fetchPhotographe();   
     
     /* getCurrentName :
