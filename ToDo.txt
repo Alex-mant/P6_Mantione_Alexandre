@@ -1,0 +1,11 @@
+*-*-*-*-*   Terminé     *-*-*-*-*
+[V]  Reorganiser les fichiers.
+[V]  Mettre en Favoris les maquettes, notes et critères d'évaluation du projet.
+
+*-*-*-*-*   En cours...    *-*-*-*-*
+[X]  Refactoring avec des class Js.
+
+
+*-*-*-*-*   A faire     *-*-*-*-*
+[X]  Continuer la page book.html dans la mesure du possible.
+[X]  Voir les css en commun avec index et book.
