@@ -1,5 +1,6 @@
-.photograph-header {
-    background-color: #FAFAFA;
+.photograph-book_header {
+    background-color: rgba(212, 54, 54, 0.24);
+    /* background-color: #FAFAFA; */
     height: 300px;
     margin: 0 100px;
 }
