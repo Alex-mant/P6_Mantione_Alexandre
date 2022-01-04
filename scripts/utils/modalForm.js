@@ -1,4 +1,18 @@
-import { createFormModal } from './CreateDynamicModal.js';
+import { Mydata} from './class_Mydata.js';
+
+/* APPARITION FORMULAIRE ET ASSIGNATION DU PHOTOGRAPHE */
+
+export const createFormModal = async () => {
+    const data = new Mydata();
+    await data.initData();
+    const photographer = data.getPhotographersById();
+    
+    document.querySelector(".modal").style.display = "block";
+    document.querySelector(".form_title").innerHTML =
+    `    
+        Contactez-moi </br>${photographer.name}          
+    `
+};
 
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
 export const openForm = () => {
