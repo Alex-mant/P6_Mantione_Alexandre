@@ -150,23 +150,24 @@ select#nav-list{
     
 }
 .likesnprice{
+    font-size: 18px;
+    font-weight: bolder;
     width: 250px;
     display: flex;
     justify-content: space-around;
-    padding: 15px;
+    padding: 33px;
     background-color: #DB8876;
     position: fixed;
     bottom: 0;
-    right:100px ;
+    right: 100px;
     border-radius: 5px 5px 0 0;
 }
-
 
 .media-img{
     display: flex;
     justify-self: center;
     width: 100%;
-    height: 300px;
+    aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 5px;
 }
