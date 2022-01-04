@@ -118,7 +118,7 @@ form h2{
 
 select#nav-list{
     height: 40px;
-    background-color: brown;
+    background-color: #901C1C;
     color: white;
     border-radius: 5px;
 }
@@ -130,4 +130,26 @@ select#nav-list{
 .mediaGallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 50px 1fr;
+}
+.likesnprice{
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #DB8876;
+    position: fixed;
+    bottom: 0;
+    right:100px ;
+    border-radius: 5px 5px 0 0;
+}
+
+.mediaGallery{
+    margin: 0 auto;
+}
+.media-img{
+    width: 200px;
+    max-height: 250px;
+    margin-top: 20px;
+    object-fit: cover;
 }
