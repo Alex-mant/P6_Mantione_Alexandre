@@ -26,7 +26,7 @@ const mediaDisplay = async () => {
     document.querySelector(".mediaGallery").innerHTML = media.map((media) =>
     `
     <figure class="gallery-cards">
-        <a href="/assets/albums/${photographer.name.split(" ")[0]}/${media.image}">
+        <a href="./assets/albums/${photographer.name.split(" ")[0]}/${media.image}">
         <img class="media-img" src="/assets/albums/${photographer.name.split(" ")[0]}/${media.image}">
         </a>
 
