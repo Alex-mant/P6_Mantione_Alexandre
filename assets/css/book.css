@@ -1,4 +1,4 @@
-.photograph-book_header {
+#photograph-book_header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #FAFAFA;
@@ -99,4 +99,35 @@ form h2{
     justify-self: center;
     align-self:center;
     border-radius: 50%;
+}
+
+#gallery{
+    margin: 0 100px;
+}
+
+.filter{
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter p{
+    font-weight: bold;
+}
+
+select#nav-list{
+    height: 40px;
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+}
+
+.gallery .filter{
+    display: flex;
+    margin: 0 auto;
+}
+.mediaGallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }

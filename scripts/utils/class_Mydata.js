@@ -1,5 +1,5 @@
 export class Mydata{
-    constructor(dataUrl='./data/photographers.json'){
+    constructor(dataUrl='data/photographers.json'){
         this._dataUrl = dataUrl;
         this._photographers = [];
         this._media = [];

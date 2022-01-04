@@ -1,14 +1,16 @@
+Objectif Lundi & Mardi Matin :
+
 *-*-*-*-*   Terminé     *-*-*-*-*
 [V]  Reorganiser les fichiers.
 [V]  Mettre en Favoris les maquettes, notes et critères d'évaluation du projet.
 [V]  Refactoring avec des class Js.
+[V]  Voir les css en commun avec index et book.
 
 *-*-*-*-*   En cours...    *-*-*-*-*
 [X]  Continuer la page book.html dans la mesure du possible.
 
 
 *-*-*-*-*   A faire     *-*-*-*-*
-[X]  Voir les css en commun avec index et book.
 
 
 
