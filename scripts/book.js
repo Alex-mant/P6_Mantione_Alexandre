@@ -15,14 +15,17 @@ getSelectValue();
 const mediaDisplay = async () => {
     const data = new Mydata();
     await data.initData();
-   
-
-    // document.querySelector(".mediaGallery").innerHTML = 
-    //     `
-    //     <img class="media-img" src="${allMedia.image}"></img>
-        
-    //     `
-    // ).join(""));
+    const photographer = data.getPhotographersById();
+    const media = data.getAllMedia();
+    
+    document.querySelector(".photograph-book_portrait").src =`${photographer.portrait}`;
+    
+    document.querySelector(".mediaGallery").innerHTML = media.map((media) =>
+    `
+    <img class="media-img" src="/assets/albums/${photographer.name.split(" ")[0]}/${media.image}"></img>    
+    
+    `
+    ).join("")    
 
 }
 mediaDisplay();

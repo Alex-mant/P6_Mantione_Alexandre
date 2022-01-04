@@ -17,6 +17,11 @@ export class Mydata{
     getAllPhotographers() {
         return this._photographers;
     }
+
+    getAllMedia(){
+        const media = this._media
+        return media.filter((media) => media.photographerId == window.location.search.split('?id=').join(""))
+    }
     
     getPhotographersById(){
         const currentId = window.location.search.split('?id=').join("");

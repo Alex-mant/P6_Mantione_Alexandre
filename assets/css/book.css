@@ -128,9 +128,10 @@ select#nav-list{
     margin: 0 auto;
 }
 .mediaGallery{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row: 50px 1fr;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 .likesnprice{
     width: 250px;
@@ -148,8 +149,11 @@ select#nav-list{
     margin: 0 auto;
 }
 .media-img{
-    width: 200px;
-    max-height: 250px;
-    margin-top: 20px;
+    width: 30%;
+    display: flex;
+    justify-self: center;
+    min-width: 250px;
+    max-height: 300px;
+    margin: 10px 5px 0;
     object-fit: cover;
 }
