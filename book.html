@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="./assets/css/book.css" rel="stylesheet" type="text/css" />
-    <link  href="./assets/css/style.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link type="text/css" href="./assets/css/style.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/book.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <script type="module" src="./scripts/book.js" defer></script>
     <title>Fisheye - photographe </title>
@@ -14,16 +14,15 @@
       <a href="./index.html"><img src="./assets/images/logo.png" class="logo" /></a>
     </header>
     <main id="main">
-      <div class="photograph-book_header">
-        <div class="photograph-book_mini-card">
-          <h2 class="photograph-book_name"></h2>
-          <span class="photograph-book_location"></span>
-          <span class="photograph-book_tagline"></span>
-          <span class="photograph-book_price"></span>
-        </div>
-        
+      <section class="photograph-book_header">
+        <div class="photograph_card">
+          <h2 class="photograph-book_name">${photographer.name}</h2>
+          <span class="photograph-book_location">${allPhotograph.city}, ${allPhotograph.country}</span>
+          <span class="photograph-book_tagline">${photographer.tagline}</span>
+        </div>        
         <button class="contact_button">Contactez-moi</button>
-      </div>
+        <img class="photograph-book_portrait" src="./assets/photographers/MimiKeel.jpg">
+      </section>
       <div id="contact_modal">
         <div class="modal">
           <div class="form_container">
