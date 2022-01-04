@@ -27,7 +27,7 @@ const mediaDisplay = async () => {
     `
     <figure class="gallery-cards">
         <a href="./assets/albums/${photographer.name.split(" ")[0]}/${media.image}">
-        <img class="media-img" src="/assets/albums/${photographer.name.split(" ")[0]}/${media.image}">
+        <img class="media-img" src="./assets/albums/${photographer.name.split(" ")[0]}/${media.image}">
         </a>
 
         <figcaption class="media-titlesnlikes">
