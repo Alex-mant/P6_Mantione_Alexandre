@@ -11,10 +11,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 3.8vh 2.1vw;
+    margin: 2% 2.8vw;
 }
 
 h1 {
+    margin: 0;
     color: #901C1C;
 }
 

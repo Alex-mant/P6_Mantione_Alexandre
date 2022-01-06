@@ -1,9 +1,17 @@
+main{
+    margin: 0 2.8vw;
+}
+
+header{
+    margin: 2% 2.8vw;
+}
+
 #photograph-book_header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #FAFAFA;
     height: 15vw;
-    margin: 0 40px;
+    
 }
 
 .contact_button {
@@ -118,7 +126,6 @@ form h2{
 
 
 .filter{
-    margin: 0 2vw;
     display: flex;
     width: 160px;
     justify-content: space-between;
@@ -138,7 +145,6 @@ select#nav-list{
 
 .gallery .filter{
     display: flex;
-    margin: 0 auto;
 }
 .mediaGallery{
     width: 100%;
