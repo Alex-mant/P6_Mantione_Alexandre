@@ -50,6 +50,7 @@ h1 {
     width: 200px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 8px 12px 0 rgb(0 0 0 / 55%);
 }
 
 .photographer_section.photographer_section article a{
