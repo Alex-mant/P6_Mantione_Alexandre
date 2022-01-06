@@ -2,7 +2,7 @@ export class Mydata{
     constructor(dataUrl='data/photographers.json'){
         this._dataUrl = dataUrl;
         this._photographers = [];
-        this._media = [];
+        this._media = [];       
     }
     
     async initData(){
@@ -17,7 +17,7 @@ export class Mydata{
     getAllPhotographers() {
         return this._photographers;
     }
-
+    
     getAllMedia(){
         const media = this._media
         return media.filter((media) => media.photographerId == window.location.search.split('?id=').join(""))
@@ -27,4 +27,5 @@ export class Mydata{
         const currentId = window.location.search.split('?id=').join("");
         return this._photographers.find(photographers => photographers.id == currentId);
     }
+    
 }
