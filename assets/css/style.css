@@ -2,7 +2,7 @@
 
 body {
     font-family: "DM Sans", sans-serif;
-    margin: 0 100px;
+    margin: 0 200px;
 }
 
 
@@ -11,7 +11,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 2vh 17vw;
+    margin: 3.8vh 2.1vw;
 }
 
 h1 {

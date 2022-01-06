@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 50px;
+    height: 15vw;
+    margin: 0 40px;
 }
 
 .contact_button {
@@ -23,9 +23,6 @@
     cursor: pointer;
 }
 
-body{
-    margin: 0;
-}
 
 form{
     width: 300px;
@@ -92,19 +89,19 @@ form h2{
 }
 
 .photograph-book_name{
-    font-size: 64px;
+    font-size: 3vw;
     color: #D3573C;
-    margin-bottom: 16px;
+    margin: 2vw 0;
 }
 
 .photograph-book_location{
-    font-size: 24px;
+    font-size: 1.25vw;
     color: #901C1C;
-    margin-bottom: 19px;
+    margin-bottom: 1vw;
 }
 
 .photograph-book_tagline{
-    font-size: 18px;
+    font-size: 0.95vw;
     color:#525252;
 }
 
@@ -172,7 +169,7 @@ select#nav-list{
     border-radius: 5px;
 }
 .media-titlesnlikes{
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: bolder;
     color: #901C1C;
     width: 100%;

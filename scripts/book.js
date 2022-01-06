@@ -7,6 +7,7 @@ import { Mydata } from "./utils/class_Mydata.js";
 openForm();
 closeForm();
 submitForm();
+
 /* FILTRE GALLERY*/
 getSelectValue();
 
