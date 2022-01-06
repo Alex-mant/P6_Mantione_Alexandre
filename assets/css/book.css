@@ -1,9 +1,9 @@
 main{
-    margin: 0 2.8vw;
+    margin: 0 10%;
 }
 
 header{
-    margin: 2% 2.8vw;
+    margin: 2% 10%;
 }
 
 #photograph-book_header {
@@ -97,9 +97,9 @@ form h2{
 }
 
 .photograph-book_name{
-    font-size: 3vw;
+    font-size: 2.5vw;
     color: #D3573C;
-    margin: 2vw 0;
+    margin: 2.25vw 0;
 }
 
 .photograph-book_location{
