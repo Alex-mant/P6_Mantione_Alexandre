@@ -17,7 +17,7 @@ const mediaDisplay = async () => {
     await data.initData();
     const photographer = data.getPhotographersById();
     const media = data.getAllMedia();
-    let myCountOfLikes = 0;
+    const myCountOfLikes = data.countOfLikes();
 
 
     /*AFFiCHE LES INFOS PHOTOGRAPHE */
@@ -27,10 +27,7 @@ const mediaDisplay = async () => {
     document.querySelector(".photograph-book_tagline").innerHTML=`${photographer.tagline}`;
     document.querySelector(".pricePerHour").innerHTML =`${Math.round(photographer.price / 8)}€/heure`;
     /* COMPTABILISE LE NBR TOTAL DE LIKES */
-    for(let i = 0, len = media.length; i < len; i++) {
-        myCountOfLikes += media[i].likes        
-        document.querySelector(".likes-count").innerHTML = `${myCountOfLikes} `
-    }
+    document.querySelector(".likes-count").innerHTML = `${myCountOfLikes} `
     
     /* AFFICHE LA GALLERY DU PHOTOGRAPHE */
     document.querySelector(".mediaGallery").innerHTML = media.map((media) =>

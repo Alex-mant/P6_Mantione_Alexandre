@@ -2,7 +2,8 @@ export class Mydata{
     constructor(dataUrl='data/photographers.json'){
         this._dataUrl = dataUrl;
         this._photographers = [];
-        this._media = [];       
+        this._media = [];
+        this._myCountOfLikes = 0;     
     }
     
     async initData(){
@@ -10,10 +11,10 @@ export class Mydata{
         .then((res) => res.json())
         .then((promise) => {
             this._photographers = promise.photographers;
-            this._media = promise.media;
+            this._media = promise.media
         })
     }
-        
+    
     getAllPhotographers() {
         return this._photographers;
     }
@@ -26,6 +27,12 @@ export class Mydata{
     getPhotographersById(){
         const currentId = window.location.search.split('?id=').join("");
         return this._photographers.find(photographers => photographers.id == currentId);
+    }
+
+    countOfLikes(){
+       return this.getAllMedia()
+       .map(item => item.likes)
+       .reduce((prev, curr) => prev + curr, 0);
     }
     
 }
