@@ -57,10 +57,10 @@ const mediaDisplay = async () => {
     const focusVideo = document.querySelectorAll("figure img");
     focusVideo.forEach((item)=>{
         if (item.outerHTML == `<img class="media-img" src="./assets/albums/${photographer.name.split(" ")[0]}/undefined">`){
-            item.outerHTML = `<video class="media-video" src="./assets/albums/${photographer.name.split(" ")[0]}/${myVideo}">`
+            item.outerHTML = `<video class="media-video" src="./assets/albums/${photographer.name.split(" ")[0]}/${myVideo}" autoplay loop muted></video>`
         }
     })
   };
-  test();
+  test();  
 };
 mediaDisplay();
