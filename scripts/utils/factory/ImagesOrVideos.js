@@ -2,8 +2,7 @@ export const factoryGallery = async (medias, photographer) => {
   const video = () => {
         const mediaFiltered = medias.filter((media) => (media.video));        
         const name = photographer.name.split(" ")[0];
-        
-        console.log(mediaFiltered[0].title);
+
         /*Création des élements*/
         const figure = document.createElement("figure");
         const MediaLink = document.createElement("a");
