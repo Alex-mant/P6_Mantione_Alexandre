@@ -5,13 +5,13 @@
     [V]  Mettre en Favoris les maquettes, notes et critères d'évaluation du projet.
     [V]  Refactoring avec des class Js.
     [V]  Continuer la page book.html dans la mesure du possible.
+    [V]  Commencer à regarder pour factoryPattern "vidéo =/= image" Comment faire ?
 
 
 *-*-*-*-*   En cours...    *-*-*-*-*
 
 
 *-*-*-*-*   A faire     *-*-*-*-*
-[X]  Commencer à regarder pour factoryPattern "vidéo =/= image" Comment faire ?
 [X]  Voir les css en commun avec index et book.
 
 
