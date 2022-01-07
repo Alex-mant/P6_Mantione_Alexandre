@@ -1,8 +1,17 @@
 export const factoryGallery = (medias, photographer) => {
   const createMediaEnvironnement = (media) => {
     const name = photographer.name.split(" ")[0];
+
+    /*Création des élements*/
     let image;
     let video;
+    const figure = document.createElement("figure");
+    const MediaLink = document.createElement("a");
+    const figCaption = document.createElement("figcaption");
+    const span1 = document.createElement("span");
+    const span2 = document.createElement("span");
+    
+    /*Condition de création en fonction du type de média*/
     if (media.image) {
       /*Création des élements*/
       image = document.createElement("img");
@@ -24,12 +33,6 @@ export const factoryGallery = (medias, photographer) => {
       /*RATTACHEMENT des elements*/
       MediaLink.append(video);
     }
-    /*Création des élements*/
-    const figure = document.createElement("figure");
-    const MediaLink = document.createElement("a");
-    const figCaption = document.createElement("figcaption");
-    const span1 = document.createElement("span");
-    const span2 = document.createElement("span");   
 
     /*Assignation de classes css*/
     figure.classList.add("gallery-cards");
