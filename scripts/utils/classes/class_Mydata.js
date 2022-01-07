@@ -14,12 +14,14 @@ export class Mydata{
             this._media = promise.media
         })
     }
-    
+    getAllMedia(){
+        return this._media
+    }
     getAllPhotographers() {
         return this._photographers;
     }
     
-    getAllMedia(){
+    getMediaOfCurrentPhotographer(){
         const media = this._media
         return media.filter((media) => media.photographerId == window.location.search.split('?id=').join(""))
     }
@@ -30,7 +32,7 @@ export class Mydata{
     }
 
     countOfLikes(){
-       return this.getAllMedia()
+       return this.getMediaOfCurrentPhotographer()
        .map(item => item.likes)
        .reduce((prev, curr) => prev + curr, 0);
     }
