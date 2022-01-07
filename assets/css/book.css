@@ -168,32 +168,27 @@ select#nav-list{
     border-radius: 5px 5px 0 0;
 }
 
-.media-img{
+.media-imgnvideo{
     display: flex;
     justify-self: center;
-    width: 100%;
-    aspect-ratio: 16/9;
+    width: 350px;
+    height: 300px;
+    object-position: 0 25%;
     object-fit: cover;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
-.media-video{
-    display: flex;
-    justify-self: center;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 5px;
-}
+
 .media-titlesnlikes{
-    font-size: 1.25vw;
+    font-size: 0.8vw;
     font-weight: bolder;
     color: #901C1C;
-    width: 100%;
+    width: 350px;
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .gallery-cards{
@@ -202,7 +197,8 @@ select#nav-list{
 }
 
 figcaption button{
-    font-size: 24px;
+    vertical-align: top;
+    font-size: 0.85vw;
     color: #901C1C;
     border: 0px;
     background-color: #FFFF;
