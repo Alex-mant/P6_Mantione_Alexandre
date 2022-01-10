@@ -41,7 +41,7 @@ export const factoryGallery = (medias, photographer) => {
     span2.classList.add("media-likes");
     /* Ajout dans l'HTML */
     span1.innerHTML = media.title;
-    span2.innerHTML = `${media.likes} <button role="button" aria-label="likes" class="btn-for-"><i aria-hidden="true" class="fas fa-heart"></i></button>`;
+    span2.innerHTML = `${media.likes} <button class="unliked" role="button" aria-label="likes" class="btn-for-"><i aria-hidden="true" class="fas fa-heart"></i></button>`;
     /*RATTACHEMENT des elements*/
     document.querySelector(".mediaGallery").append(figure);
     figure.append(figCaption, MediaLink);

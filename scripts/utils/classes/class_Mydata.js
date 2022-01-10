@@ -30,11 +30,5 @@ export class Mydata{
         const currentId = window.location.search.split('?id=').join("");
         return this._photographers.find(photographers => photographers.id == currentId);
     }
-
-    countOfLikes(){
-       return this.getMediaOfCurrentPhotographer()
-       .map(item => item.likes)
-       .reduce((prev, curr) => prev + curr, 0);
-    }
     
 }

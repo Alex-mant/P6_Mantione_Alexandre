@@ -2,7 +2,7 @@ import { openForm, closeForm, submitForm } from "./utils/fonctions/modalForm.js"
 import { getSelectValue } from "./utils/fonctions/galleryFilter.js";
 import { Mydata } from "./utils/classes/class_Mydata.js";
 import { cardInfoPhotographer } from "./utils/fonctions/infoCardPhotographer.js";
-import { sumOfLikes } from "./utils/fonctions/CountOfLikes.js";
+import { countOfLikes } from "./utils/fonctions/CountOfLikes.js";
 import { factoryGallery } from "./utils/factory/ImagesOrVideos.js";
 
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
@@ -19,14 +19,12 @@ const mediaDisplay = async () => {
   await data.initData();
   const medias = data.getMediaOfCurrentPhotographer();
   const photographer = data.getPhotographersById();
-  const myCountOfLikes = data.countOfLikes();
   
   factoryGallery(medias, photographer);
-
-
   /*AFFiCHE LES INFOS PHOTOGRAPHE */
   cardInfoPhotographer(photographer);
   /* COMPTABILISE LE NBR TOTAL DE LIKES */
-  sumOfLikes(myCountOfLikes);
+  countOfLikes(medias);
 };
+
 mediaDisplay();
