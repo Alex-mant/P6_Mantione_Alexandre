@@ -4,6 +4,7 @@ import { Mydata } from "./utils/classes/class_Mydata.js";
 import { cardInfoPhotographer } from "./utils/fonctions/infoCardPhotographer.js";
 import { countOfLikes } from "./utils/fonctions/CountOfLikes.js";
 import { factoryGallery } from "./utils/factory/ImagesOrVideos.js";
+import { Lightbox } from "./utils/classes/class_Lightbox.js";
 
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
 openForm();
@@ -25,6 +26,28 @@ const mediaDisplay = async () => {
   cardInfoPhotographer(photographer);
   /* COMPTABILISE LE NBR TOTAL DE LIKES */
   countOfLikes(medias);
+
+  /* LightBox */
+  Lightbox.init();
+
+
+/*TEST*/
+
+/*RECUPERER TITRE MEDIA POUR LIGHTBOX*/
+
+
+  console.log(
+    document.querySelectorAll(".media-title").forEach(title =>  {
+      title.addEventListener("click", (title) =>{
+        console.log(title);
+      })
+    })
+  );
+ 
 };
 
+
+
+
+/**/
 mediaDisplay();

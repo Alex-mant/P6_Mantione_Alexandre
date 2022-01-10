@@ -2,7 +2,7 @@ export const countOfLikes = (medias) => {
     let myCountOfLikes = medias.map(item => item.likes).reduce((prev, curr) => prev + curr, 0);
     const totalCounter = document.querySelector(".likes-count");
     let setCounterOfLikes = totalCounter.innerHTML = myCountOfLikes;
-    let allButtons = [...document.querySelectorAll(".media-likes button")];
+    let allButtons = document.querySelectorAll(".media-likes button");
 
     /* incrementation et décrémentation des compteurs au click sur bouton like */
     allButtons.forEach(button => {

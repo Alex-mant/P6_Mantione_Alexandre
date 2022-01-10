@@ -11,7 +11,7 @@ export const factoryGallery = (medias, photographer) => {
     const likeButton = document.createElement("button")
     const span1 = document.createElement("span");
     const span2 = document.createElement("span");
-    
+  
     /*Condition de création en fonction du type de média*/
     if (media.image) {
       /*Création des élements*/
