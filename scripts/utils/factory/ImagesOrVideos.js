@@ -8,6 +8,7 @@ export const factoryGallery = (medias, photographer) => {
     const figure = document.createElement("figure");
     const MediaLink = document.createElement("a");
     const figCaption = document.createElement("figcaption");
+    const likeButton = document.createElement("button")
     const span1 = document.createElement("span");
     const span2 = document.createElement("span");
     
@@ -37,17 +38,21 @@ export const factoryGallery = (medias, photographer) => {
     /*Assignation de classes css*/
     figure.classList.add("gallery-cards");
     figCaption.classList.add("media-titlesnlikes");
+    likeButton.classList.add("unliked")
     span1.classList.add("media-title");
     span2.classList.add("media-likes");
     /* Ajout dans l'HTML */
+    likeButton.innerHTML = `<i aria-hidden="true" class="fas fa-heart"></i>`
     span1.innerHTML = media.title;
-    span2.innerHTML = `${media.likes} <button class="unliked" role="button" aria-label="likes" class="btn-for-"><i aria-hidden="true" class="fas fa-heart"></i></button>`;
+    span2.innerHTML = `<span class= "counter">${media.likes}</span>`
     /*RATTACHEMENT des elements*/
     document.querySelector(".mediaGallery").append(figure);
     figure.append(figCaption, MediaLink);
     figCaption.append(span1, span2);
+    span2.append(likeButton);
+
   };
- 
+
   const createImage = (media) => {
     createMediaEnvironnement(media);
   };

@@ -1,49 +1,23 @@
 export const countOfLikes = (medias) => {
-
     let myCountOfLikes = medias.map(item => item.likes).reduce((prev, curr) => prev + curr, 0);
-    document.querySelector(".likes-count").innerHTML = `${myCountOfLikes} `;
+    const totalCounter = document.querySelector(".likes-count");
+    let setCounterOfLikes = totalCounter.innerHTML = myCountOfLikes;
+    let allButtons = [...document.querySelectorAll(".media-likes button")];
 
-    let allButtons = document.querySelectorAll(".media-likes button");
-
+    /* incrementation et décrémentation des compteurs au click sur bouton like */
     allButtons.forEach(button => {
-        if (button.classList.contains("unliked")){
-            button.addEventListener("click", ()=>{
-                button.classList.remove("unliked");
-                button.classList.add("liked");
-                console.log("++");                
-                if (button.classList.contains("liked")){
-                    button.addEventListener("click", ()=>{
-                        button.classList.add("unliked");
-                        button.classList.remove("liked");
-                        console.log("--");
-                    });
-                }      
-            });
-        }   
-      
+        button.addEventListener("click",() => {
+            if(button.classList.contains("unliked")){
+                button.classList.replace("unliked", "liked");
+                setCounterOfLikes += 1   //incrémentation du compteur total
+                totalCounter.innerHTML = setCounterOfLikes; // refresh du compteur total
+                button.parentNode.children[0].textContent++;  //incrémentation du compteur local
+            } else {
+                button.classList.replace("liked", "unliked");
+                setCounterOfLikes -= 1   //décrémentation du compteur total
+                totalCounter.innerHTML = setCounterOfLikes; // refresh du compteur total
+                button.parentNode.children[0].textContent--; //décrémentation du compteur local
+            }
+        })
     });
-}
-
-// if (button
-// myCountOfLikes += 1;
-// document.querySelector(".likes-count").innerHTML = `${myCountOfLikes}`;         
-/*
-
-si unliked
-ecoute click
-
-    si click
-    add class like
-    remove class unliked
-
-    sinon rien
-
-si liked
-ecoute click
-
-    si click
-    removeclass like
-    add class unliked
-
-    sinon rien
-*/
+};
