@@ -13,7 +13,7 @@
     [X]  Rendre le site accessible
     [X]  les filtres par pop, rating etc...
     [X]  Revoir le css des likes
-
+    [X]  modal contact ?
 
 
 
