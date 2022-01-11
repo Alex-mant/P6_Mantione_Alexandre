@@ -12,6 +12,7 @@
     [X]  Voir les css en commun avec index et book.
     [X]  Rendre le site accessible
     [X]  les filtres par pop, rating etc...
+    [X]  Revoir le css des likes
 
 
 
