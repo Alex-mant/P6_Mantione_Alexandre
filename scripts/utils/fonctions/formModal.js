@@ -1,4 +1,4 @@
-import { Mydata} from '../classes/class_Mydata.js';
+import { Mydata} from '../entity/MyData.js';
 
 /* APPARITION FORMULAIRE ET ASSIGNATION DU PHOTOGRAPHE */
 
