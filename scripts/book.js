@@ -28,26 +28,6 @@ const mediaDisplay = async () => {
   countOfLikes(medias);
 
   /* LightBox */
-  Lightbox.init();
-
-
-/*TEST*/
-
-/*RECUPERER TITRE MEDIA POUR LIGHTBOX*/
-
-
-  console.log(
-    document.querySelectorAll(".media-title").forEach(title =>  {
-      title.addEventListener("click", (title) =>{
-        console.log(title);
-      })
-    })
-  );
- 
-};
-
-
-
-
-/**/
+  Lightbox.init(medias);
+}
 mediaDisplay();

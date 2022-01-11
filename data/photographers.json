@@ -223,7 +223,7 @@
 			"id": 83958935,
 			"photographerId": 925,
 			"title": "Cute puppy on sunset",
-			"video": "/Animals_Puppiness.mp4",
+			"video": "Animals_Puppiness.mp4",
 			"likes": 52,
 			"date": "2016-06-12",
 			"price": 70
@@ -331,7 +331,7 @@
 		{
 			"id": 2525345343,
 			"photographerId": 243,
-			"title": "Wednesday Potrait",
+			"title": "Wednesday Portrait",
 			"image": "Portrait_Wednesday.jpg",
 			"likes": 34,
 			"date": "2019-04-07",
