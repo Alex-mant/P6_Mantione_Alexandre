@@ -82,13 +82,14 @@ export class Lightbox {
       this._toRemove = document.querySelector("figure .lightbox__media"); 
       this._nextOrPrevMedia = document.createElement("img");
       this._nextOrPrevMedia.classList.add("lightbox__media");
-      if(document.querySelector(".lightbox__figure video")){
-      }
     }
     else if(this._gallery[this._position].includes(".mp4")){
       this._nextOrPrevMedia = document.createElement("video");
-      this._toRemove = document.querySelector("figure .lightbox__media");     
       this._nextOrPrevMedia.classList.add("lightbox__media");
+      this._nextOrPrevMedia.setAttribute("autoplay","")
+      this._nextOrPrevMedia.setAttribute("loop","")
+      this._nextOrPrevMedia.setAttribute("controls","")
+      this._toRemove = document.querySelector("figure .lightbox__media");     
     }
     
     this._nextOrPrevMedia.src = this._gallery[this._position];
@@ -120,7 +121,7 @@ export class Lightbox {
     if (e.key === "Escape") {
       this.close(e);
     } else if (e.key === "ArrowLeft") {
-      this.prev(e);
+      this.prev(e)
     } else if (e.key === "ArrowRight") {
       this.next(e);
     }
