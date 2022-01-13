@@ -1,4 +1,4 @@
-import { Mydata } from './utils/classes/class_Mydata.js'
+import { Mydata } from './utils/entity/MyData.js'
 
 // Création dynamique des cartes de photographes
 const photographeDisplay = async () => {

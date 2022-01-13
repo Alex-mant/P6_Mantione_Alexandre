@@ -54,7 +54,7 @@
 .lightbox__container .lightbox__media{
     width: 30vw;
     height: auto;
-    animation : lightboxIn .5s;
+    animation : fade .5s;
 
 }
 .lightbox__container{
@@ -66,7 +66,7 @@
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 10;
     overflow: auto;
-    animation: lightboxIn .5s;
+    animation: fade .5s;
     transition: opacity .3s;
 }
 
@@ -83,7 +83,21 @@ figcaption.lightbox__caption {
     justify-content: center;
 }
 
-@keyframes lightboxIn{
+img.active{
+    display: block;
+    animation: fade 0.8s;
+}
+
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+
+@keyframes fade{
     from {
         opacity: 0;
     }to{

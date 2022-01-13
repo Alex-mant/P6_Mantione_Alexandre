@@ -38,7 +38,7 @@ export const factoryGallery = (medias, photographer) => {
     /*Assignation de classes css*/
     figure.classList.add("gallery-cards");
     figCaption.classList.add("media-titlesnlikes");
-    likeButton.classList.add("unliked")
+    likeButton.classList.add("unliked");
     span1.classList.add("media-title");
     span2.classList.add("media-likes");
     /* Ajout dans l'HTML */
