@@ -8,10 +8,10 @@ export const factoryGallery = (medias, photographer) => {
     const figure = document.createElement("figure");
     const MediaLink = document.createElement("a");
     const figCaption = document.createElement("figcaption");
-    const likeButton = document.createElement("button")
+    const likeButton = document.createElement("button");
     const span1 = document.createElement("span");
     const span2 = document.createElement("span");
-  
+
     /*Condition de création en fonction du type de média*/
     if (media.image) {
       /*Création des élements*/
@@ -42,15 +42,14 @@ export const factoryGallery = (medias, photographer) => {
     span1.classList.add("media-title");
     span2.classList.add("media-likes");
     /* Ajout dans l'HTML */
-    likeButton.innerHTML = `<i aria-hidden="true" class="fas fa-heart"></i>`
+    likeButton.innerHTML = `<i aria-hidden="true" class="fas fa-heart"></i>`;
     span1.innerHTML = media.title;
-    span2.innerHTML = `<span class= "counter">${media.likes}</span>`
+    span2.innerHTML = `<span class= "counter">${media.likes}</span>`;
     /*RATTACHEMENT des elements*/
     document.querySelector(".mediaGallery").append(figure);
     figure.append(figCaption, MediaLink);
     figCaption.append(span1, span2);
     span2.append(likeButton);
-
   };
 
   const createImage = (media) => {

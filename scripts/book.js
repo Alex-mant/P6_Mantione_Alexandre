@@ -20,7 +20,7 @@ const mediaDisplay = async () => {
   await data.initData();
   const medias = data.getMediaOfCurrentPhotographer();
   const photographer = data.getPhotographersById();
-  
+
   factoryGallery(medias, photographer);
   /*AFFiCHE LES INFOS PHOTOGRAPHE */
   cardInfoPhotographer(photographer);
@@ -29,5 +29,5 @@ const mediaDisplay = async () => {
 
   /* LightBox */
   Lightbox.init(medias);
-}
+};
 mediaDisplay();

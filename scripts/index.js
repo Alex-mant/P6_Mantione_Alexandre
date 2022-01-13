@@ -1,4 +1,4 @@
-import { Mydata } from './utils/entity/MyData.js'
+import { Mydata } from "./utils/entity/MyData.js";
 
 // Création dynamique des cartes de photographes
 const photographeDisplay = async () => {
@@ -7,8 +7,10 @@ const photographeDisplay = async () => {
   const photographer = data.getAllPhotographers();
 
   // Création d'une boucle afin de creer du contenu HTML pour chaque itération des objets contenu dans les données récuperés
-  document.querySelector(".photographer_section").innerHTML = photographer.map((allPhotograph) =>
-    `
+  document.querySelector(".photographer_section").innerHTML = photographer
+    .map(
+      (allPhotograph) =>
+        `
         <article class="index_card">
                 <!-- envoi l'id dans l'url -->
             <a href="book.html?id=${allPhotograph.id}">
