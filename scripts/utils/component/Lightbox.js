@@ -42,7 +42,7 @@ export class Lightbox {
     window.setTimeout(() => {
       this._element.parentElement.removeChild(this._element);
     }, 500);
-    document.removeEventListener("keyup", this._onKeyUp);
+    document.removeEventListener("keyup", this.onKeyUp);
   }  
   
   next(e) {
@@ -123,8 +123,5 @@ export class Lightbox {
     this._nextOrPrevMedia.src = this._gallery[this._position];
     document.querySelector(".lightbox__figure").replaceChild(this._nextOrPrevMedia, this._toRemove);
     document.querySelector(".lightbox__caption").innerHTML = this._titles[this._position].innerText;
-
-  }
-
-  
+  }  
 }
