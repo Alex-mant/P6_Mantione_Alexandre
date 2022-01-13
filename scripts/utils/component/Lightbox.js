@@ -29,9 +29,9 @@ export class Lightbox {
     
     this._element = this.buildDOM();
     this._onKeyUp = this.onKeyUp.bind(this);
-    this._images = images;
+    this._gallery = images;
     this._titles = titles;
-    this._position = this._images.findIndex((image) => image === this._mediaUrl);
+    this._position = this._gallery.findIndex((image) => image === this._mediaUrl);
     document.body.append(this._element);
     document.addEventListener("keyup", this.onKeyUp);
   }
@@ -77,30 +77,33 @@ export class Lightbox {
   
   
   loadMedia() {
-    const myMedia = document.querySelector(".lightbox__media");
-  
-    if(this._images[this._position].includes(".jpg")){
-      myMedia.src = this._images[this._position];
+    
+    if(this._gallery[this._position].includes(".jpg")){
+      this._toRemove = document.querySelector("figure .lightbox__media"); 
+      this._nextOrPrevMedia = document.createElement("img");
+      this._nextOrPrevMedia.classList.add("lightbox__media");
+      if(document.querySelector(".lightbox__figure video")){
+      }
     }
-    else if(this._images[this._position].includes(".mp4")){
-     const video = document.createElement("video");
-     video.classList.add("lightbox__media");
-     video.src = this._images[this._position];
-     document.querySelector("figure.lightbox__figure").appendChild(video);
-     document.body.removeChild("img.lightbox__media");
+    else if(this._gallery[this._position].includes(".mp4")){
+      this._nextOrPrevMedia = document.createElement("video");
+      this._toRemove = document.querySelector("figure .lightbox__media");     
+      this._nextOrPrevMedia.classList.add("lightbox__media");
     }
-
+    
+    this._nextOrPrevMedia.src = this._gallery[this._position];
+    document.querySelector(".lightbox__figure").replaceChild(this._nextOrPrevMedia, this._toRemove);
     document.querySelector(".lightbox__caption").innerHTML = this._titles[this._position].innerText;
+
   }
 
   
   next(e) {
     e.preventDefault();
-    
-    if (this._position === this._images.length - 1) {
+    if (this._position === this._gallery.length - 1) {
       this._position -= 1;
     } else {
-      this.loadMedia(this._images[this._position += 1]);
+      this.loadMedia(this._gallery[this._position += 1]);
     }
   }
   
@@ -109,7 +112,7 @@ export class Lightbox {
     if (this._position === 0) {
       this._position = 0
     } else {
-      this.loadMedia(this._images[this._position -= 1]);
+      this.loadMedia(this._gallery[this._position -= 1]);
     }
   }
   
