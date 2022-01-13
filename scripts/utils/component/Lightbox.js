@@ -28,13 +28,50 @@ export class Lightbox {
     });
     
     this._element = this.buildDOM();
-    this._onKeyUp = this.onKeyUp.bind(this);
     this._gallery = images;
     this._titles = titles;
     this._position = this._gallery.findIndex((image) => image === this._mediaUrl);
+    this.onKeyUp = this.onKeyUp.bind(this);
     document.body.append(this._element);
     document.addEventListener("keyup", this.onKeyUp);
   }
+
+  close(e) {
+    e.preventDefault();
+    this._element.classList.add("fadeOut");
+    window.setTimeout(() => {
+      this._element.parentElement.removeChild(this._element);
+    }, 500);
+    document.removeEventListener("keyup", this._onKeyUp);
+  }  
+  
+  next(e) {
+    e.preventDefault();
+    if (this._position === this._gallery.length - 1) {
+      this._position -1;
+    } else {
+      this.loadMedia(this._gallery[this._position += 1]);
+    }
+  }
+  
+  prev(e) {
+    e.preventDefault();
+    if (this._position === 0) {
+      this._position = 0
+    } else {
+      this.loadMedia(this._gallery[this._position -= 1]);
+    }
+  }
+  
+  onKeyUp(e) {
+    if (e.key === "Escape") {
+      this.close(e);
+    } else if (e.key === "ArrowLeft") {
+      this.prev(e)
+    } else if (e.key === "ArrowRight") {
+      this.next(e);
+    }
+  }  
 
   buildDOM() {
     this._dom = document.createElement("div");
@@ -66,16 +103,7 @@ export class Lightbox {
   }
   
   
-  close(e) {
-    e.preventDefault();
-    this._element.classList.add("fadeOut");
-    window.setTimeout(() => {
-      this._element.parentElement.removeChild(this._element);
-    }, 500);
-    document.removeEventListener("keyup", this._onKeyUp);
-  }
-  
-  
+
   loadMedia() {
     
     if(this._gallery[this._position].includes(".jpg")){
@@ -98,34 +126,5 @@ export class Lightbox {
 
   }
 
-  
-  next(e) {
-    e.preventDefault();
-    if (this._position === this._gallery.length - 1) {
-      this._position -= 1;
-    } else {
-      this.loadMedia(this._gallery[this._position += 1]);
-    }
-  }
-  
-  prev(e) {
-    e.preventDefault();
-    if (this._position === 0) {
-      this._position = 0
-    } else {
-      this.loadMedia(this._gallery[this._position -= 1]);
-    }
-  }
-  
-  onKeyUp(e) {
-    if (e.key === "Escape") {
-      this.close(e);
-    } else if (e.key === "ArrowLeft") {
-      this.prev(e)
-    } else if (e.key === "ArrowRight") {
-      this.next(e);
-    }
-  }
-  
   
 }
