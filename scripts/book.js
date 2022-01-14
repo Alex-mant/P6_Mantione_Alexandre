@@ -1,6 +1,6 @@
 import { openForm, closeForm, submitForm } from "./utils/fonctions/formModal.js";
 import { getSelectValue } from "./utils/fonctions/galleryFilter.js";
-import { Mydata } from "./utils/entity/Mydata.js";
+import { Mydata } from "./utils/entity/mydata.js";
 import { cardInfoPhotographer } from "./utils/fonctions/cardInfoPhotographer.js";
 import { countOfLikes } from "./utils/fonctions/CountOfLikes.js";
 import { factoryGallery } from "./utils/factory/factoryGallery.js";
