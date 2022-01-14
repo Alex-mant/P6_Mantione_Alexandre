@@ -1,10 +1,10 @@
-import { openForm, closeForm, submitForm } from "/utils/fonctions/formModal.js";
-import { getSelectValue } from "/utils/fonctions/galleryFilter.js";
-import { Mydata } from "/utils/entity/Mydata.js";
-import { cardInfoPhotographer } from "/utils/fonctions/cardInfoPhotographer.js";
-import { countOfLikes } from "/utils/fonctions/CountOfLikes.js";
-import { factoryGallery } from "/utils/factory/factoryGallery.js";
-import { Lightbox } from "/utils/component/Lightbox.js";
+import { openForm, closeForm, submitForm } from "./utils/fonctions/formModal.js";
+import { getSelectValue } from "./utils/fonctions/galleryFilter.js";
+import { Mydata } from "./utils/entity/MyData.js";
+import { cardInfoPhotographer } from "./utils/fonctions/cardInfoPhotographer.js";
+import { countOfLikes } from "./utils/fonctions/CountOfLikes.js";
+import { factoryGallery } from "./utils/factory/factoryGallery.js";
+import { Lightbox } from "./utils/component/Lightbox.js";
 
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
 openForm();
