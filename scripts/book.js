@@ -1,7 +1,7 @@
 import { openForm, closeForm, submitForm } from "./utils/fonctions/formModal.js";
 import { Mydata } from "./utils/entity/MyData.js";
 import { Gallery } from "./utils/component/gallery.js";
-import { refresh } from "./utils/fonctions/refreshGallery.js"
+import { refreshGallery } from "./utils/fonctions/refreshGallery.js"
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
 openForm();
 closeForm();
@@ -15,4 +15,4 @@ await data.initData();
 const navList = document.getElementById("nav-list");
 const myGallery = new Gallery(data);
 myGallery.mediaDisplay();
-refresh(navList, myGallery);
+refreshGallery(navList, myGallery);

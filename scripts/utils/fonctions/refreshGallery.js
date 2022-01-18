@@ -1,6 +1,6 @@
-export const refresh = (navList, myGallery) => {
-    navList.addEventListener("change", () => {
+export const refreshGallery = (triggersTheGalleryRefreshment, Gallery) => {
+    triggersTheGalleryRefreshment.addEventListener("change", () => {
         const resetGallery = document.querySelector(".mediaGallery").innerHTML = "";
-        myGallery.mediaDisplay();
+        Gallery.mediaDisplay();
     });
 }

@@ -14,12 +14,37 @@ export const createFormModal = async () => {
 };
 
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
+let userLogs = {
+  name: " ",
+  surname: " ",
+  email: " ",
+  message: " ",
+};
+
 export const openForm = () => {
   const btnOpenForm = document.querySelector(".contact_button");
 
   btnOpenForm.addEventListener("click", (event) => {
     event.preventDefault();
     createFormModal();
+  });
+  
+  /*enregistrement des entrées utilisateur*/
+  document.querySelectorAll("form label input").forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.id === "name"){
+        userLogs.name = input.value;
+      } else if (input.id === "surname"){
+        userLogs.surname = input.value;
+      } else if (input.id === "email")
+        userLogs.email = input.value ;
+    });
+  });
+
+  /*enregristrement du message utilisateur*/
+  const userMessage = document.querySelector("form label textarea")
+  userMessage.addEventListener("change", () => {
+    userLogs.message = userMessage.value;
   });
 };
 
@@ -36,5 +61,6 @@ export const submitForm = () => {
   const btnSubmitForm = document.querySelector(".form_submitBtn");
   btnSubmitForm.addEventListener("click", (event) => {
     event.preventDefault();
+    console.log(userLogs);    
   });
 };
