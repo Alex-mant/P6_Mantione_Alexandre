@@ -1,17 +1,23 @@
 export const factoryGallery = (medias, photographer) => {
+  const reset = document.querySelector(".mediaGallery").innerHTML = "";
   const createMediaEnvironnement = (media) => {
     const name = photographer.name.split(" ")[0];
-
+    
     /*Création des élements*/
     let image;
     let video;
     const figure = document.createElement("figure");
+    figure.innerHTML = "";
     const MediaLink = document.createElement("a");
+    MediaLink.innerHTML = "";
     const figCaption = document.createElement("figcaption");
+    figCaption.innerHTML = "";
     const likeButton = document.createElement("button");
     const span1 = document.createElement("span");
+    span1.innerHTML = "";
     const span2 = document.createElement("span");
-
+    span2.innerHTML = "";
+    
     /*Condition de création en fonction du type de média*/
     if (media.image) {
       /*Création des élements*/
@@ -34,7 +40,7 @@ export const factoryGallery = (medias, photographer) => {
       /*RATTACHEMENT des elements*/
       MediaLink.append(video);
     }
-
+    
     /*Assignation de classes css*/
     figure.classList.add("gallery-cards");
     figCaption.classList.add("media-titlesnlikes");
@@ -51,14 +57,14 @@ export const factoryGallery = (medias, photographer) => {
     figCaption.append(span1, span2);
     span2.append(likeButton);
   };
-
+  
   const createImage = (media) => {
     createMediaEnvironnement(media);
   };
   const createVideo = (media) => {
     createMediaEnvironnement(media);
   };
-
+  
   medias.forEach((media) => {
     if (media.video) {
       createVideo(media);
