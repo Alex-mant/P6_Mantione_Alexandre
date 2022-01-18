@@ -1,5 +1,5 @@
 import { openForm, closeForm, submitForm } from "./utils/fonctions/formModal.js";
-import { Mydata } from "./utils/entity/Mydata.js";
+import { Mydata } from "./utils/entity/MyData.js";
 import { Gallery } from "./utils/component/gallery.js";
 import { refresh } from "./utils/fonctions/refreshGallery.js"
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
