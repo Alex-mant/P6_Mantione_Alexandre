@@ -1,5 +1,4 @@
 export const factoryGallery = (medias, photographer) => {
-  const reset = document.querySelector(".mediaGallery").innerHTML = "";
   const createMediaEnvironnement = (media) => {
     const name = photographer.name.split(" ")[0];
     
