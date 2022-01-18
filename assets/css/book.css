@@ -190,6 +190,10 @@ select#nav-list{
     margin: 0 auto;
 }
 
+#gallery h2{
+    display: none;
+}
+
 .gallery-cards{
     display: flex;
     flex-direction: column-reverse;

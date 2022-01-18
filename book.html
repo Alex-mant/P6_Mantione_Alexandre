@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -8,28 +8,28 @@
     <link type="text/css" href="./assets/css/lightbox.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5725aae538.js" crossorigin="anonymous"></script>
-    <script type="module" src="./scripts/book.js" defer></script>
     <title>Fisheye - photographe </title>
   </head>
   <body>
     <header>
-      <a href="./index.html"><img src="./assets/images/logo.png" class="logo" /></a>
+      <a href="./index.html"><img src="./assets/images/logo.png" alt="logo du site FishEye" class="logo" /></a>
     </header>
     <main id="main">
       <section id="photograph-book_header">
         <div class="photograph_card">
-          <h2 class="photograph-book_name"></h2>
+          <h2 class="photograph-book_name">informations <br> du <br> photographe</h2>
           <span class="photograph-book_location"></span>
           <span class="photograph-book_tagline"></span>
         </div>        
         <button class="contact_button">Contactez-moi</button>
-        <img class="photograph-book_portrait" src="./assets/photographers/account.png">
+        <img class="photograph-book_portrait" alt="portrait du photographe" src="./assets/photographers/account.png">
       </section>
       <section id="gallery">
+        <h2>gallerie du photographe</h2>
         <div class="filter">
           <p>Trier par</p>
           <select  id="nav-list">
-            <option value=""></option>
+            <option value="empty">Votre choix</option>
             <option value="date">Date</option>
             <option value="pop">Popularité</option>
             <option value="title">Titre</option>            
@@ -49,31 +49,32 @@
       <div class="modal">
         <div class="form_container">
           <span class="form_closeBtn">
-              <img src="./assets/icons/close.svg" alt="">
+            <img src="./assets/icons/close.svg" alt="">
           </span>
-          <form action="">
-              <h2 class="form_title">Contactez-moi</h2>
-              <label for="">
-                  <p class="form_text">Prénom</p>
-                  <input class="form_input" type="text">
-              </label>
-              <label for="">
-                  <p class="form_text">Nom</p>
-                  <input class="form_input" type="text">
-              </label>
-              <label for="">
-                  <p class="form_text">Email</p>
-                  <input class="form_input" type="text">
-              </label>
-              <label for="">
-                  <p class="form_text ">Votre message</p>
-                  <textarea class="form_input message" type="text"></textarea>
-              </label>
-              </br></br>
-              <button class="form_submitBtn"type="submit">Envoyer</button>
-          </form>
-      </div>
+          <form action="urldetraitement">
+            <h2 class="form_title">Contactez-moi</h2>
+            <label for="name">
+              <span class="form_text">Prénom</span>
+              <input id="name" class="form_input" type="text">
+            </label>
+            <label for="surname">
+              <span class="form_text">Nom</span>
+              <input id="surname" class="form_input" type="text">
+            </label>
+            <label for="email">
+              <span class="form_text">Email</span>
+              <input id="email" class="form_input" type="text">
+            </label>
+            <label for="message">
+              <span class="form_text ">Votre message</span>
+              <textarea id="message" class="form_input message"></textarea>
+            </label>
+          <br><br>
+          <button class="form_submitBtn" type="submit">Envoyer</button>
+        </form>
       </div>
     </div>
-  </body>
+  </div>
+  <script type="module" src="./scripts/book.js"></script>
+</body>
 </html>
