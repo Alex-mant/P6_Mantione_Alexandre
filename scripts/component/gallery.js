@@ -1,7 +1,7 @@
 import { factoryGallery } from "../factory/factoryGallery.js";
-import { cardInfoPhotographer } from "../fonctions/cardInfoPhotographer.js";
-import { filterBy } from "../fonctions/filterBy.js";
-import { countOfLikes } from "../fonctions/CountOfLikes.js"
+import { cardInfoPhotographer } from "../utils/fonctions/cardInfoPhotographer.js";
+import { filterBy } from "../utils/fonctions/filterBy.js";
+import { countOfLikes } from "../utils/fonctions/CountOfLikes.js"
 import { Lightbox } from "./Lightbox.js";
 
 export class Gallery{

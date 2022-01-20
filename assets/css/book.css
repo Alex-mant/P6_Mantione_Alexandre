@@ -81,12 +81,19 @@ form h2{
 .message{
     height: 70px;
 }
-.form_submitBtn{
+.submit_enabled{
     background-color: #911C1C ;
     padding: 10px;
     color: white;
     border: 1px solid #0000;
     cursor:pointer;
+}
+.submit_disabled{
+    background-color: #4b3e3e70;
+    padding: 10px;
+    color: #ffffff45;
+    border: 1px solid #0000;
+    cursor: pointer;
 }
 
 .photograph_card{
