@@ -1,4 +1,4 @@
-import { factoryGallery } from "../factory/factoryGallery.js";
+import { mediaFactory } from "../factory/mediaFactory.js";
 import { cardInfoPhotographer } from "../utils/fonctions/cardInfoPhotographer.js";
 import { filterBy } from "../utils/fonctions/filterBy.js";
 import { countOfLikes } from "../utils/fonctions/CountOfLikes.js"
@@ -19,7 +19,7 @@ export class Gallery{
 
     mediaDisplay(){      
       /* AFFICHE LA GALLERY*/
-      factoryGallery(this._mediasFiltered, this._photographer);
+      mediaFactory(this._mediasFiltered, this._photographer);
       /*AFFiCHE LES INFOS PHOTOGRAPHE */
       cardInfoPhotographer(this._photographer);
       /* COMPTABILISE LE NBR TOTAL DE LIKES */

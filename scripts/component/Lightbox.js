@@ -117,6 +117,7 @@ export class Lightbox {
 
     this._nextOrPrevMedia.src = this._gallery[this._position];
     document.querySelector(".lightbox__figure").replaceChild(this._nextOrPrevMedia, this._toRemove);
+    console.log(this._titles)
     document.querySelector(".lightbox__caption").innerHTML = this._titles[this._position].innerText;
   }
 }
