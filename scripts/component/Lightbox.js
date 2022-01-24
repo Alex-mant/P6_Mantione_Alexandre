@@ -2,7 +2,7 @@ export class Lightbox {
   static init(medias) {
     const links = Array.from(document.querySelectorAll('a[href$=".png"], a[href$=".jpg"],a[href$=".mp4"]'));
     const images = links.map((link) => link.getAttribute("href"));
-    const titles = Array.from(document.querySelectorAll(".media-title"));
+    const titles = Array.from(document.querySelectorAll(".media-titles"));
 
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
@@ -117,7 +117,6 @@ export class Lightbox {
 
     this._nextOrPrevMedia.src = this._gallery[this._position];
     document.querySelector(".lightbox__figure").replaceChild(this._nextOrPrevMedia, this._toRemove);
-    console.log(this._titles)
     document.querySelector(".lightbox__caption").innerHTML = this._titles[this._position].innerText;
   }
 }
