@@ -11,13 +11,13 @@ export class Gallery{
       this._photographer = this._data.getPhotographersById();
       this._mediasFiltered = filterBy(this._medias);
       
+      
     }
     
     refresh(){          
-      this.mediaDisplay();
-      }
-
-    mediaDisplay(){      
+      this.display();
+    }
+    display(){     
       /* AFFICHE LA GALLERY*/
       mediaFactory(this._mediasFiltered, this._photographer);
       /*AFFiCHE LES INFOS PHOTOGRAPHE */
@@ -25,6 +25,6 @@ export class Gallery{
       /* COMPTABILISE LE NBR TOTAL DE LIKES */
       countOfLikes(this._medias);      
       /* LightBox */
-      Lightbox.init(this._medias);
+      Lightbox.init(this._mediasFiltered);
     };  
 }

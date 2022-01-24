@@ -14,5 +14,5 @@ await data.initData();
 /*MISE EN PLACE DE LA GALLERIE */
 const navList = document.getElementById("nav-list");
 const myGallery = new Gallery(data);
-myGallery.mediaDisplay();
+myGallery.display();
 refreshGallery(navList, myGallery);

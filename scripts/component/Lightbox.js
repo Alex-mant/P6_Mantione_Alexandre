@@ -85,12 +85,12 @@ export class Lightbox {
 
     this._dom.innerHTML = `     
     <div class="lightbox">
-    <button class="lightbox__close">Fermer</button>
-    <button class="lightbox__next">Suivant</button>
-    <button class="lightbox__prev">Précedent</button>
+      <button class="lightbox__close">Fermer</button>
+      <button class="lightbox__next">Suivant</button>
+      <button class="lightbox__prev">Précedent</button>
     <figure class="lightbox__figure">
-    <figcaption class="lightbox__caption">${this._media.title}</figcaption>
-    ${this._typeOfMedia}
+      <figcaption class="lightbox__caption">${this._media.title}</figcaption>
+      ${this._typeOfMedia}
     </figure>
     </div>      
     `;
