@@ -199,6 +199,7 @@ select#nav-list{
 }
 
 .media-likes i {
+    cursor: pointer;
     font-size: 22px;
     margin-top: 3px;
 }
