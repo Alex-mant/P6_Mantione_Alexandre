@@ -9,11 +9,15 @@ export const countOfLikes = (medias) => {
     button.addEventListener("click", () => {
       if (button.classList.contains("unliked")) {
         button.classList.replace("unliked", "liked");
+        button.classList.add("clicked")
+        button.parentElement.children[0].classList.add("clicked");
         setCounterOfLikes += 1; //incrémentation du compteur total
         totalCounter.innerHTML = setCounterOfLikes; // refresh du compteur total
         button.parentNode.children[0].textContent++; //incrémentation du compteur local
       } else {
         button.classList.replace("liked", "unliked");
+        button.classList.remove("clicked");
+        button.parentElement.children[0].classList.remove("clicked");
         setCounterOfLikes -= 1; //décrémentation du compteur total
         totalCounter.innerHTML = setCounterOfLikes; // refresh du compteur total
         button.parentNode.children[0].textContent--; //décrémentation du compteur local

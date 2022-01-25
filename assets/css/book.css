@@ -195,7 +195,18 @@ select#nav-list{
     justify-content: space-between;
     padding: 0;
     margin: 0 auto;
+    font-size: 22px;
 }
+
+.media-likes i {
+    font-size: 22px;
+    margin-top: 3px;
+}
+
+.clicked {
+    color: rgb(211, 87, 60);
+}
+
 
 #gallery h2{
     display: none;
