@@ -1,6 +1,9 @@
-export const refreshGallery = (triggersTheGalleryRefreshment, Gallery) => {
-    triggersTheGalleryRefreshment.addEventListener("change", () => {
-        const resetGallery = document.querySelector(".mediaGallery").innerHTML = "";
-        Gallery.display();
+export const refreshGallery = (Gallery) => {
+    const options = document.querySelectorAll(".option");
+    options.forEach(opt =>{
+        opt.addEventListener("click", () => {
+            document.querySelector(".mediaGallery").innerHTML = "";
+            Gallery.display();
+        })
     });
 }

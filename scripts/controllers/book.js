@@ -6,13 +6,12 @@ import { refreshGallery } from "../utils/helpers/refreshGallery.js";
 
 const data = new Mydata();
 await data.initData();
-const navList = document.getElementById("nav-list");
 const myGallery = new Gallery(data);
 
 
 //  MISE EN PLACE DE LA GALLERIE
 myGallery.display();
-refreshGallery(navList, myGallery);
+refreshGallery(myGallery);
 
 // OUVERTURE ET FERMETURE DU FORMULAIRE
 openForm();

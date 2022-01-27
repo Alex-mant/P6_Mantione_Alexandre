@@ -130,17 +130,6 @@ form h2{
     border-radius: 50%;
 }
 
-.filter{
-    display: flex;
-    width: 160px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 4rem;
-}
-
-.filter p{
-    font-weight: bold;
-}
 
 select#nav-list{
     height: 40px;

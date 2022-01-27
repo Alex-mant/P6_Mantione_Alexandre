@@ -6,6 +6,7 @@
     <link type="text/css" href="./assets/css/style.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/book.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/lightbox.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/dropdown.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5725aae538.js" crossorigin="anonymous"></script>
     <title>Fisheye - photographe </title>
@@ -26,14 +27,33 @@
       </section>
       <section id="gallery">
         <h2>gallerie du photographe</h2>
-        <div class="filter">
-          <p>Trier par</p>
-          <select  id="nav-list">
-            <option id="t0" value="date">Date</option>
-            <option id="t1" value="pop">Popularité</option>
-            <option id="t2" value="title">Titre</option>            
-          </select>
+<!--  -->
+        <div class="filter-container">
+          <h3>Trier par</h3>
+          
+          <div class="select-box">
+            <div class="options-container">
+
+              <div class="option">
+                <input type="radio" class="radio" id="Popularité" name="filtre">
+                <label for="gallery">Popularité</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="Date" name="filtre">
+                <label for="gallery">Date</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="Titre" name="filtre">
+                <label for="gallery">Titre</label>
+              </div>
+
+            </div>
+            <div class="selected"> </div>
+          </div>
         </div>
+<!--  -->
         <div class="mediaGallery"></div>
       </section>
       <div class="likesnprice">
@@ -75,6 +95,7 @@
       </div>
     </div>
     <script type="module" src="./scripts/controllers/book.js"></script>
+    <script type="module" src="./scripts/utils/helpers/dropdown.js"></script>
   </body>
   </html>
   
