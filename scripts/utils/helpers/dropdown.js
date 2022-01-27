@@ -4,9 +4,6 @@ const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".options-container");
 const selectBox = document.querySelector("select-box");
 const selectedAfterStyle = getRuleWithSelector(".selected::after");
-console.log(selectedAfterStyle.cssText);
-
-
 const optionsList = document.querySelectorAll(".option");
 
 selected.addEventListener("click", () => {
