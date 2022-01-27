@@ -1,9 +1,9 @@
 main{
-    margin: 0 10%;
+    margin: 0 auto;
 }
 
 header{
-    margin: 2% 10%;
+    margin: 2rem 13rem;
 }
 
 #photograph-book_header {
@@ -11,7 +11,7 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #FAFAFA;
     height: 15vw;
-    
+    margin: 0 13rem;
 }
 
 .contact_button {
@@ -130,14 +130,12 @@ form h2{
     border-radius: 50%;
 }
 
-
-
 .filter{
     display: flex;
     width: 160px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1%;
+    margin: 1rem 4rem;
 }
 
 .filter p{
@@ -149,6 +147,10 @@ select#nav-list{
     background-color: #901C1C;
     color: white;
     border-radius: 5px;
+}
+
+section#gallery {
+    margin: 0 9rem;
 }
 
 .gallery .filter{
@@ -178,8 +180,8 @@ select#nav-list{
 .media-imgnvideo{
     display: flex;
     justify-self: center;
-    width: 350px;
-    height: 300px;
+    width: 400px;
+    height: 350px;
     object-position: 0 25%;
     object-fit: cover;
     border-radius: 5px;
@@ -190,7 +192,7 @@ select#nav-list{
 .media-titlesnlikes{
     font-weight: bolder;
     color: #901C1C;
-    width: 350px;
+    width: 400px;
     display: flex;
     justify-content: space-between;
     padding: 0;

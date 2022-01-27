@@ -1,8 +1,8 @@
 import { mediaFactory } from "../factory/mediaFactory.js";
-import { cardInfoPhotographer } from "../utils/fonctions/cardInfoPhotographer.js";
-import { filterBy } from "../utils/fonctions/filterBy.js";
-import { countOfLikes } from "../utils/fonctions/CountOfLikes.js"
-import { Lightbox } from "./Lightbox.js";
+import { filterBy } from "../utils/helpers/filterBy.js";
+import { cardInfoPhotographer } from "../views/cardInfoPhotographer.js";
+import { countOfLikes } from "../utils/helpers/CountOfLikes.js";
+import { Lightbox } from "../views/Lightbox.js";
 
 export class Gallery{
     constructor(data){
@@ -10,13 +10,12 @@ export class Gallery{
       this._medias = this._data.getMediaOfCurrentPhotographer();
       this._photographer = this._data.getPhotographersById();
       this._mediasFiltered = filterBy(this._medias);
-      
-      
     }
     
     refresh(){          
       this.display();
     }
+    
     display(){     
       /* AFFICHE LA GALLERY*/
       mediaFactory(this._mediasFiltered, this._photographer);

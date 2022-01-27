@@ -1,4 +1,4 @@
-import { Media } from "../component/Media.js";
+import { Media } from "../controllers/Media.js";
 
 export const mediaFactory = (medias, nameOfPhotographer) =>{
     medias.forEach(media => {
@@ -6,7 +6,7 @@ export const mediaFactory = (medias, nameOfPhotographer) =>{
             media = new Media(media.title, media.likes, media.image, nameOfPhotographer);
             media.image()
         } else if (media.video){
-            media = new Media (media.title, media.likes, media.video, nameOfPhotographer)
+            media = new Media (media.title, media.likes, media.video, nameOfPhotographer);
             media.video()
         }
     });

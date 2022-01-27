@@ -10,7 +10,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 2% 10%;
+    margin: 2rem 13rem 6rem ;
 }
 
 h1 {
@@ -23,7 +23,6 @@ h1 {
 }
 
 .photographer_section {
-    max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
