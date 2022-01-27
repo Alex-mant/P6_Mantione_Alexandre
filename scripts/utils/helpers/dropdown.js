@@ -9,6 +9,7 @@ const optionsList = document.querySelectorAll(".option");
 selected.addEventListener("click", () => {
     optionsContainer.classList.toggle("opt-active");
     selected.classList.toggle("sel-radius");
+    selectedAfterStyle.style.transform = "rotate(270deg)"
 });
 
 optionsList.forEach((o) => {
@@ -16,7 +17,7 @@ optionsList.forEach((o) => {
         let options = Array.from(o.parentElement.children);
         options.map(option => {
             if(option.classList.contains("disNone")){
-                option.classList.remove("disNone")
+                option.classList.remove("disNone");
             }
         });
                         

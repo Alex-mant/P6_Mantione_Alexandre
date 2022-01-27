@@ -186,12 +186,12 @@ section#gallery {
     justify-content: space-between;
     padding: 0;
     margin: 0 auto;
-    font-size: 22px;
+    font-size: 19px;
 }
 
 .media-likes i {
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 3px;
 }
 

@@ -55,8 +55,9 @@
     width: 30vw;
     height: auto;
     animation : fade .5s;
-
+    max-height: 885px;
 }
+
 .lightbox__container{
     position: fixed;
     top: 0px;
