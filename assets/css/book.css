@@ -205,7 +205,7 @@ section#gallery {
 
 .gallery-cards{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 figcaption button{

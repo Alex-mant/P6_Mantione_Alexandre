@@ -10,6 +10,8 @@ selected.addEventListener("click", () => {
     optionsContainer.classList.toggle("opt-active");
     selected.classList.toggle("sel-radius");
     selectedAfterStyle.style.transform = "rotate(270deg)"
+
+    
 });
 
 optionsList.forEach((o) => {

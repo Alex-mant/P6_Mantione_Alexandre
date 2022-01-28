@@ -13,29 +13,29 @@ export class Media {
         document.querySelector(".mediaGallery").append(this._figure);
         this._figure.innerHTML =
         `
+        <a class="myMedia" href="./assets/albums/${this._nameOfPhotographer}/${this._url}">${media}</a>
         <figcaption class="media-titlesnlikes">
         <span class="media-titles">${this._title}</span>
         <span class="media-likes">
         <span class="counter">${this._likes}</span>
-        <button class="unliked">
+        <button role="boutton" aria-label="like" class="unliked">
         <i aria-hidden="true" class="fas fa-heart"></i>
         </button>
         </span>
         </figcaption>
-        <a class="myMedia" href="./assets/albums/${this._nameOfPhotographer}/${this._url}">${media}</a> 
         `
     }
 
     image(){
         this._image = `        
-            <img src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">     
+            <img role="image" alt="${this._title}" src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">     
         `
         this.init(this._image);
     }
 
     video(){
         this._video = `            
-            <video src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">            
+            <video role="video" alt="${this._title}" src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">            
         `     
         this.init(this._video);
     }

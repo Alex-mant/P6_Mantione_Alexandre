@@ -11,6 +11,7 @@ export const createFormModal = async () => {
   document.querySelector(".form_title").innerHTML = `    
         Contactez-moi </br>${photographer.name}          
     `;
+  document.addEventListener("keyup", onKeyUp);
 };
 
 /* OUVERTURE ET FERMETURE DU FORMULAIRE */
@@ -59,6 +60,19 @@ export const closeForm = () => {
   });
 };
 
+const onKeyUp = (e) => {
+  if (e.key === "Escape") {
+    close(e);
+  }
+}
+
+const close = (e) => {
+  e.preventDefault();
+  window.setTimeout(() => {
+    document.querySelector(".modal").style.display ="none"
+  }, 500);
+    document.removeEventListener("keyup", onKeyUp);
+}
 
 const validInputs = {
   firstName: false,
