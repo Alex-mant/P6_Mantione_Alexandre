@@ -48,8 +48,8 @@ export class Lightbox {
   next(e) {
     e.preventDefault();
     if (this._position === this._gallery.length - 1) {
-      this._position - 1;
-    } else {
+      this._position -= this._gallery.length;
+    } else{
       this.loadMedia(this._gallery[(this._position += 1)]);
     }
   }
@@ -57,7 +57,7 @@ export class Lightbox {
   prev(e) {
     e.preventDefault();
     if (this._position === 0) {
-      this._position = 0;
+      this._position += this._gallery.length;
     } else {
       this.loadMedia(this._gallery[(this._position -= 1)]);
     }
