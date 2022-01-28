@@ -95,3 +95,7 @@
 .disNone{
     display: none;
 }
+
+.selected input{
+    display: none;
+}
