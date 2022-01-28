@@ -14,13 +14,13 @@ export class Media {
         this._figure.innerHTML =
         `
         <figcaption class="media-titlesnlikes">
-            <span class="media-titles">${this._title}</span>
-            <span class="media-likes">
-            <span class="counter">${this._likes}</span>
-                <button class="unliked">
-                    <i aria-hidden="true" class="fas fa-heart"></i>
-                </button>
-            </span>
+        <span class="media-titles">${this._title}</span>
+        <span class="media-likes">
+        <span class="counter">${this._likes}</span>
+        <button class="unliked">
+        <i aria-hidden="true" class="fas fa-heart"></i>
+        </button>
+        </span>
         </figcaption>
         <a class="myMedia" href="./assets/albums/${this._nameOfPhotographer}/${this._url}">${media}</a> 
         `
@@ -28,8 +28,8 @@ export class Media {
 
     image(){
         this._image = `        
-            <img src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">        
-        `     
+            <img src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">     
+        `
         this.init(this._image);
     }
 

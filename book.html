@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link type="text/css" href="./assets/css/style.css" rel="stylesheet">
-    <link type="text/css" href="./assets/css/book.css" rel="stylesheet">
-    <link type="text/css" href="./assets/css/lightbox.css" rel="stylesheet">
-    <link type="text/css" href="./assets/css/dropdown.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link type="text/css" href="./assets/css/style.css" rel="stylesheet" />
+    <link type="text/css" href="./assets/css/book.css" rel="stylesheet" />
+    <link type="text/css" href="./assets/css/lightbox.css" rel="stylesheet" />
+    <link type="text/css" href="./assets/css/dropdown.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/5725aae538.js" crossorigin="anonymous"></script>
-    <title>Fisheye - photographe </title>
+    <title>Fisheye - photographe</title>
   </head>
   <body>
     <header>
-      <a href="./index.html"><h1><img src="./assets/images/logo.png" alt="logo du site FishEye" class="logo" /></h1></a>
+      <a href="./index.html"
+        ><h1><img src="./assets/images/logo.png" alt="logo du site FishEye" class="logo" /></h1
+      ></a>
     </header>
     <main id="main">
       <section id="photograph-book_header">
         <div class="photograph_card">
-          <h2 class="photograph-book_name"></h2>
+          <h2 class="photograph-book_name"> </h2>
           <span class="photograph-book_location"></span>
           <span class="photograph-book_tagline"></span>
-        </div>        
+        </div>
         <button class="contact_button">Contactez-moi</button>
-        <img class="photograph-book_portrait" alt="portrait du photographe" src="./assets/photographers/account.png">
+        <img class="photograph-book_portrait" alt="portrait du photographe" src="./assets/photographers/account.png" />
       </section>
       <section id="gallery">
         <h2>gallerie du photographe</h2>
-<!--  -->
+
         <div class="filter-container">
           <h3>Trier par</h3>
-          
+
           <div class="select-box">
             <div class="options-container">
-
               <div class="option">
-                <input type="radio" class="radio" id="Popularité" name="filtre">
+                <input type="radio" class="radio" id="Popularité" name="filtre" />
                 <label for="gallery">Popularité</label>
               </div>
 
               <div class="option">
-                <input type="radio" class="radio" id="Date" name="filtre">
+                <input type="radio" class="radio" id="Date" name="filtre" />
                 <label for="gallery">Date</label>
               </div>
 
               <div class="option">
-                <input type="radio" class="radio" id="Titre" name="filtre">
+                <input type="radio" class="radio" id="Titre" name="filtre" />
                 <label for="gallery">Titre</label>
               </div>
-
             </div>
             <div class="selected"> </div>
           </div>
         </div>
-<!--  -->
+
         <div class="mediaGallery"></div>
       </section>
       <div class="likesnprice">
@@ -62,33 +62,33 @@
           <i class="fas fa-heart"></i>
         </div>
         <div class="pricePerHour">36€/heure</div>
-      </div> 
+      </div>
     </main>
     <div id="contact_modal">
       <div class="modal">
         <div class="form_container">
           <span class="form_closeBtn">
-            <img src="./assets/icons/close.svg" alt="">
+            <img src="./assets/icons/close.svg" alt="" />
           </span>
           <form action="urldetraitement">
             <h2 class="form_title">Contactez-moi</h2>
             <label for="name">
               <span class="form_text">Prénom</span>
-              <input id="name" class="form_input" type="text">
+              <input id="name" class="form_input" type="text" />
             </label>
             <label for="surname">
               <span class="form_text">Nom</span>
-              <input id="surname" class="form_input" type="text">
+              <input id="surname" class="form_input" type="text" />
             </label>
             <label for="email">
               <span class="form_text">Email</span>
-              <input id="email" class="form_input" type="text">
+              <input id="email" class="form_input" type="text" />
             </label>
             <label for="message">
-              <span class="form_text ">Votre message</span>
+              <span class="form_text">Votre message</span>
               <textarea id="message" class="form_input message"></textarea>
             </label>
-            <br><br>
+            <br /><br />
             <button class="form_submitBtn submit_disabled" type="submit" disabled>Envoyer</button>
           </form>
         </div>
@@ -97,5 +97,4 @@
     <script type="module" src="./scripts/controllers/book.js"></script>
     <script type="module" src="./scripts/utils/helpers/dropdown.js"></script>
   </body>
-  </html>
-  
+</html>

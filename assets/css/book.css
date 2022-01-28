@@ -142,16 +142,15 @@ section#gallery {
     margin: 0 9rem;
 }
 
-.gallery .filter{
-    display: flex;
-}
+
 .mediaGallery{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 100px;
-    
+    z-index: 0;    
 }
+
 .likesnprice{
     font-size: 18px;
     font-weight: bolder;
@@ -233,4 +232,3 @@ figcaption button{
     left: 50%;
     transform: translate(-50%);
 }
-

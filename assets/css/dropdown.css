@@ -39,6 +39,7 @@
     left: 15px;
     max-height: 200px;
     opacity: 1;
+    z-index: 1;
 }
 
 .selected {
