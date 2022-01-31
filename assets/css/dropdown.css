@@ -1,101 +1,92 @@
+.filter-container *{
+    list-style: none;
+}
+
 .filter-container{
+    position: absolute;
+    top: 50px;
     display: flex;
-    margin: 1rem 2rem;
-    padding: 32px;
+    width: 220px;
+    justify-content: space-between;
     align-items: center;
 }
 
-.select-box{
-    position: relative;
-    display: flex;
-    width: 150px;
-    flex-direction: column;
+.filter-container.position-fix{
+    top: 16px;
 }
 
-.select-box .options-container{
-    background-color: #901C1C;
-    color: #f5f6fa;
-    max-height: 0;
-    width: 100%;
-    opacity: 0;
-    border-radius: 0 0 8px 8px;
-    overflow: hidden; 
-    order: 1;
+.filter-container input {
+    display: none;
 }
 
-.select-box .option::after{
-    content: "";
-    position: absolute;
-    left: 20px;
-    background-color: #ffffff;
-    width: 110px;
-    height: 1px;
-    top: 0;
-}
-
-.select-box .opt-active{
-    position: absolute;
-    top: 45px;
-    left: 15px;
-    max-height: 200px;
-    opacity: 1;
+.options-container{    
     z-index: 1;
-}
-
-.selected {
-    background: #901C1C;
-    border-radius: 8px;
-    color: white;
     position: relative;
-    left: 15px;
-    order: 0;
+    font-size: 20px;
+    background-color: #901C1C;
+    color: #ffffff;
+    width: 120px;
+    padding: 10px 5px;
+    border-radius: 8px;
+    
+    height: 25px;
+    overflow: hidden;
+    top: 0px;
 }
 
-.selected::after{
-    content: "";
-    background: url(../images/svg/arrowdropDown.svg);
-    background-size: 12px;
-    background-repeat: no-repeat;
-    transform: rotate(90deg);
-    position: absolute;
-    height: 39%;
-    width: 13px;
-    right: 15px;
-    top: 14px;
-    transition: all .4s;
-}
+img.reverseArrow{
+    transform: rotate(270deg);
+} 
 
-.sel-radius{
+.current{
+    cursor: pointer;
+    padding-left: 10px;
     border-radius: 8px 8px 0 0;
 }
 
-.select-box .options-container .opt-active + .selected::after {
-    transform: rotate(180deg);
-    top: -6px;
+.arrow{
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    padding: 0 10px;
+    width: 10px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    top: 16px;
 }
 
-.select-box .option,.selected{
-    position: relative;
-    padding: 12px 24px;
-    cursor: pointer;    
+.dropdown {
+    overflow: visible;
+    height: 110px;
+    top: 42.5px;
 }
 
-.select-box .option:hover{
-    background: #414b57;
-}
-
-.select-box label {
+.opt2, .opt3{
+    position: absolute;
+    left: 15px;
+    background-color: #901C1C;
+    width: 115px;
     cursor: pointer;
 }
-
-.select-box .option .radio{
-    display: none;
+.opt2{
+    content:"option2";
+    top: 50px;
+}
+.opt3{
+    content: "option3";    
+    top: 92px;   
 }
 
-.disNone{
-    display: none;
+.subMenuBorders::before,.subMenuBorders::after{
+    content:"";
+    position: absolute;
+    top: 45px;
+    border-top: white solid 1px;
+    height: 1px;
+    width: 110px;
+    left: 10px;
+    
 }
-
-.selected input{
-    display: none;
+.subMenuBorders::after{
+    top: 85px;
 }

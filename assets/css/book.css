@@ -139,11 +139,14 @@ select#nav-list{
 }
 
 section#gallery {
+    position: relative;
     margin: 0 9rem;
 }
 
 
 .mediaGallery{
+    position: absolute;
+    top: 130px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

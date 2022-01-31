@@ -13,49 +13,48 @@
   </head>
   <body>
     <header>
-      <a tabindex="1" role="retour page d'acccueil" aria-label="FishEye -lien vers accueil" href="./index.html"
+      <a role="retour page d'acccueil" aria-label="FishEye -lien vers accueil" href="./index.html"
         ><h1><img src="./assets/images/logo.png" alt="FishEye" role="image logo" class="logo" /></h1
       ></a>
     </header>
     <main id="main">
       <section id="photograph-book_header">
-        <div tabindex="2" aria-label="carte d'information photographe" role="afficher informations photographe" class="photograph_card">
-          <h2 tabindex="3" class="photograph-book_name"> </h2>
-          <span tabindex="4"   class="photograph-book_location"> </span>
-          <span tabindex="5" class="photograph-book_tagline"> </span>
+        <div aria-label="carte d'information photographe" role="afficher informations photographe" class="photograph_card">
+          <h2 class="photograph-book_name"> </h2>
+          <span class="photograph-book_location"> </span>
+          <span class="photograph-book_tagline"> </span>
         </div>
-        <button tabindex="6" class="contact_button">Contactez-moi</button>
+        <button class="contact_button">Contactez-moi</button>
         <img class="photograph-book_portrait" alt="portrait du photographe" src="./assets/photographers/account.png" />
       </section>
       <section id="gallery">
         <h2>gallerie du photographe</h2>
 
+
+
         <div  class="filter-container">
-          <h3 tabindex="7">Trier par</h3>
-          
-          <div tabindex="8" role="filter" class="select-box">
-            <div class="options-container">
-              <div tabindex="9" class="option">
-                <label for="Popularité">Popularité
-                  <input role="filter" type="radio" class="radio" id="Popularité" name="filtre" />
-                </label>
-              </div>
+          <h3>Trier par</h3>
+          <div class="options-container selected">
+            <div class="current-option">
+              <label tabindex = "0"  class="current" for="current">current
+                <input role="filter" type="radio" class="radio" id="current" name="filtre" />
 
-              <div class="option">
-                <label for="Date">Date
-                  <input role="filter" type="radio" class="radio" id="Date" name="filtre" />
-                </label>
-              </div>
+                <label tabindex = "0"  class="opt2" for="opt2">opt2
+                  <input role="filter" type="radio" class="radio" id="opt2opt2" name="filtre">                                          
+                </label> 
 
-              <div class="option">
-                <label for="Titre">Titre
-                  <input role="filter" type="radio" class="radio" id="Titre" name="filtre" />
-                </label>
-              </div>
+                <label tabindex = "0"  class="opt3" for="opt3">opt3
+                  <input role="filter" type="radio" class="radio" id="opt3" name="filtre">                                          
+                </label> 
+
+                <div class="subMenuBorders"></div>                         
+              </label> 
+              <img class="arrow" src="./assets/images/svg/arrowdropDown.svg">
             </div>
-            <div class="selected"> </div>
           </div>
         </div>
+
+
 
         <div class="mediaGallery"></div>
       </section>
