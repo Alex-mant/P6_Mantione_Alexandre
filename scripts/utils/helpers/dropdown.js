@@ -3,16 +3,43 @@ import { getRuleWithSelector } from "./getRulesWithSelector.js";
 const filterContainer = document.querySelector(".filter-container");
 const optContainer = document.querySelector(".options-container");
 const dropDownArrow = document.querySelector(".arrow");
-const currentOption = document.querySelector(".current-option");
-const opt2 = document.querySelector(".opt2");
-const opt3 =document.querySelector(".opt3");
 
+let currentOpt = document.querySelector(".currentOpt");
+let opt2 = document.querySelector(".opt2");
+let opt3 = document.querySelector(".opt3");
+const options = [currentOpt, opt2, opt3];
 
-currentOption.addEventListener("click", () => {
+optContainer.addEventListener("click", () => {
     optContainer.classList.toggle("dropdown");
     dropDownArrow.classList.toggle("reverseArrow");
     filterContainer.classList.toggle("position-fix");
+    if (optContainer.classList.contains("dropdown")){
+        opt2.setAttribute("tabindex",0);
+        opt3.setAttribute("tabindex",0);
+    } else {
+        opt2.removeAttribute("tabindex",0);
+        opt3.removeAttribute("tabindex",0);
+    }
 });
+
+
+options.forEach((opt) => {
+    opt.addEventListener("click", () => {
+        let switchOpt;
+        let switchCurrent = currentOpt.innerHTML
+
+        switchOpt = opt.innerHTML;        
+        opt.children[0].id = switchCurrent;
+        opt.innerHTML = switchCurrent;
+        opt.htmlFor = switchCurrent;
+
+        currentOpt.children[0].id = switchOpt;
+        currentOpt.innerHTML = switchOpt;
+        currentOpt.htmlFor = switchOpt;
+        
+    })
+});
+
 
 
 
