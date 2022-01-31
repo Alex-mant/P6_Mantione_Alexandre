@@ -1,4 +1,5 @@
 import { Mydata } from "../../entity/MyData.js";
+import { notWithTab, withTab } from "./notWithTab.js";
 
 /* APPARITION FORMULAIRE ET ASSIGNATION DU PHOTOGRAPHE */
 
@@ -6,6 +7,7 @@ export const createFormModal = async () => {
   const data = new Mydata();
   await data.initData();
   const photographer = data.getPhotographersById();
+  notWithTab();
 
   document.querySelector(".modal").style.display = "block";
   document.querySelector(".form_title").innerHTML = `    
@@ -68,6 +70,7 @@ const onKeyUp = (e) => {
 
 const close = (e) => {
   e.preventDefault();
+  withTab();
   window.setTimeout(() => {
     document.querySelector(".modal").style.display ="none"
   }, 500);
