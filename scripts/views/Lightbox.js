@@ -1,3 +1,5 @@
+import { unindex } from "../utils/helpers/notWithTab.js";
+
 export class Lightbox {
   static init(medias) {
     const links = Array.from(document.querySelectorAll('a[href$=".png"], a[href$=".jpg"],a[href$=".mp4"]'));
@@ -98,6 +100,7 @@ export class Lightbox {
     this._dom.querySelector(".lightbox__close").addEventListener("click", this.close.bind(this));
     this._dom.querySelector(".lightbox__next").addEventListener("click", this.next.bind(this));
     this._dom.querySelector(".lightbox__prev").addEventListener("click", this.prev.bind(this));
+    unindex();
     return this._dom;
   }
 
