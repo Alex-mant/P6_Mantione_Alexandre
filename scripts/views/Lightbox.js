@@ -1,4 +1,4 @@
-import { unindex } from "../utils/helpers/notWithTab.js";
+import { notWithTab, withTab } from "../utils/helpers/notWithTab.js";
 
 export class Lightbox {
   static init(medias) {
@@ -9,6 +9,7 @@ export class Lightbox {
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
+        notWithTab();
         new Lightbox(e.currentTarget.getAttribute("href"), medias, images, titles);
       });
     });
@@ -40,6 +41,7 @@ export class Lightbox {
 
   close(e) {
     e.preventDefault();
+    withTab();
     this._element.classList.add("fadeOut");
     window.setTimeout(() => {
       this._element.parentElement.removeChild(this._element);
@@ -84,7 +86,7 @@ export class Lightbox {
     } else if (this._media.image) {
       this._typeOfMedia = `<img class="lightbox__media" src="${this._mediaUrl}" alt="${this._media.title}">`;
     }
-
+  
     this._dom.innerHTML = `     
     <div class="lightbox">
       <button class="lightbox__close">Fermer</button>
@@ -100,10 +102,9 @@ export class Lightbox {
     this._dom.querySelector(".lightbox__close").addEventListener("click", this.close.bind(this));
     this._dom.querySelector(".lightbox__next").addEventListener("click", this.next.bind(this));
     this._dom.querySelector(".lightbox__prev").addEventListener("click", this.prev.bind(this));
-    unindex();
     return this._dom;
   }
-
+  
   loadMedia() {
     if (this._gallery[this._position].includes(".jpg")) {
       this._toRemove = document.querySelector("figure .lightbox__media");
