@@ -57,9 +57,6 @@
     <div id="contact_modal">
       <div class="modal">
         <div class="form_container">
-          <span class="form_closeBtn">
-            <button tabindex="0" class="closeModal" name="closeModal"><img  src="./assets/icons/close.svg" alt="close" /></button>
-          </span>
           <form action="urldetraitement">
             <h2 class="form_title">Contactez-moi</h2>
             <label for="name">
@@ -79,7 +76,10 @@
               <textarea id="message" class="form_input message"></textarea>
             </label>
             <br /><br />
-            <button class="form_submitBtn submit_disabled" type="submit" disabled>Envoyer</button>
+            <button  class="form_submitBtn submit_disabled" type="submit" disabled>Envoyer</button>
+            <span class="form_closeBtn">
+              <button type="button" class="closeModal" name="closeModal"><img  src="./assets/icons/close.svg" alt="close" /></button>
+            </span>
           </form>
         </div>
       </div>
