@@ -31,7 +31,8 @@ options.forEach((opt) => {
         opt.name = switchCurrent;
 
         currentOpt.innerText = switchOpt;
-        currentOpt.name = switchOpt;        
+        currentOpt.name = switchOpt;
+        
     })
 });
 

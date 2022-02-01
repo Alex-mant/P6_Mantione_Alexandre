@@ -9,7 +9,7 @@ const notWithTabModule2 = (element) => {
 }
 
 export const notWithTab = () => {
-    const filtre = document.querySelector(".options-container label");
+    const filtre = document.querySelector(".options-container button");
     const contact = document.querySelector(".contact_button");
     const titre = document.querySelector("header a");
     const medias = document.querySelectorAll(".myMedia");
@@ -32,7 +32,7 @@ const withTabModule2 = (element) => {
 }
 
 export const withTab = () => {
-    const filtre = document.querySelector(".options-container label");
+    const filtre = document.querySelector(".options-container button");
     const contact = document.querySelector(".contact_button");
     const titre = document.querySelector("header a");
     const medias = document.querySelectorAll(".myMedia");
