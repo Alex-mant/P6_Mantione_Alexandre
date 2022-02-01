@@ -74,6 +74,7 @@ const close = () => {
     document.querySelector(".modal").style.display ="none"
   }, 325);
   withTab();
+  reset();
   document.removeEventListener("keyup", onKeyUp);
 }
 
@@ -81,7 +82,12 @@ const validInputs = {
   name: false,
   surname: false,
   email: false,
-  message : false
+};
+
+const setInputsValue = () => {
+  validInputs.name = false;
+  validInputs.surname = false;
+  validInputs.email = false;
 };
 
 
@@ -107,10 +113,9 @@ const everyInputIsValid = () => Object.values(validInputs).every((input) => inpu
 /* SUBMITBUTTON */
 const updateSubmitBtn = () => {
   if (everyInputIsValid() === true){
-    document.querySelector(".form_submitBtn").enabled = true
+    document.querySelector(".form_submitBtn").disabled = false
     document.querySelector(".form_submitBtn").classList.replace("submit_disabled","submit_enabled");
   } else {
-    /*disabled*/
     document.querySelector(".form_submitBtn").disabled = true
     document.querySelector(".form_submitBtn").classList.replace("submit_enabled","submit_disabled");
   }  
@@ -121,10 +126,22 @@ export const submitForm = () => {
   btnSubmitForm.addEventListener("click", (event) => {
     event.preventDefault();
     console.log(userLogs);
-    close();  
+    close(); 
   });
 };
 
+const reset = () => {
+  setInputsValue();
+  updateSubmitBtn();
+  const resetElements = document.querySelectorAll(".form_container form input");
+  document.querySelectorAll(".form_container form input").forEach((input) => { 
+    input.value = ""
+    if (input.value === "") {
+      input.classList.remove("border_sucess");
+    }
+  }) 
+  
+};
 
 const name = document.querySelector("input#name");
 const errorName = document.querySelector(".error-fName");
@@ -135,6 +152,6 @@ const errorSurname = document.querySelector(".error-lName");
 const email = document.querySelector("input#email");
 const errorEmail = document.querySelector(".error-eMail");
 
-isValidFormFields(name, regExpName, errorName, name);
-isValidFormFields(surname, regExpName, errorSurname, surname);
-isValidFormFields(email, regExpEmail, errorEmail, email);
+isValidFormFields(name, regExpName, errorName, "name");
+isValidFormFields(surname, regExpName, errorSurname, "surname");
+isValidFormFields(email, regExpEmail, errorEmail, "email");
