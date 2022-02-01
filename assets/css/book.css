@@ -65,12 +65,19 @@ form h2{
 .form_text{
     margin: 5px 0;
 }
-.form_closeBtn img{
-    width: 15px;
+.form_closeBtn button{
+    background-color: #DB8876;
+    border: none;
+    width: 25px;
+    height: 25px;
     position: absolute;
     top: 20px;
     right: 15px;
     cursor: pointer;
+}
+
+.form_closeBtn img{    
+    width: 15px;
 }
 
 .form_input{
