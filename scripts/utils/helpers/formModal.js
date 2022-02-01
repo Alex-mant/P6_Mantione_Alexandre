@@ -56,9 +56,10 @@ export const openForm = () => {
 };
 
 export const closeForm = () => {
-  const btnCloseForm = document.querySelector(".form_closeBtn");
+  const btnCloseForm = document.querySelector(".form_closeBtn button");
   btnCloseForm.addEventListener("click", () => {
     document.querySelector(".modal").style.display = "none";
+    withTab();
   });
 };
 
@@ -70,7 +71,6 @@ const onKeyUp = (e) => {
 
 const close = (e) => {
   e.preventDefault();
-  withTab();
   window.setTimeout(() => {
     document.querySelector(".modal").style.display ="none"
   }, 500);

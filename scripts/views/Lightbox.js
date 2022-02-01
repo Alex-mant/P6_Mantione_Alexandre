@@ -82,9 +82,9 @@ export class Lightbox {
     this._dom.classList.add("lightbox__container");
 
     if (this._media.video) {
-      this._typeOfMedia = `<video  tabindex="0" class="lightbox__media" alt="${this._media.title}" src="${this._mediaUrl}"  loop autoplay controls mute </video>`;
+      this._typeOfMedia = `<video  tabindex="0" class="lightbox__media" alt=" " src="${this._mediaUrl}"  loop autoplay controls mute </video>`;
     } else if (this._media.image) {
-      this._typeOfMedia = `<img tabindex="0" class="lightbox__media" alt="${this._media.title}" src="${this._mediaUrl}" >`;
+      this._typeOfMedia = `<img tabindex="0" class="lightbox__media" alt=" " src="${this._mediaUrl}" >`;
     }
   
     this._dom.innerHTML = `     
@@ -110,12 +110,14 @@ export class Lightbox {
       this._toRemove = document.querySelector("figure .lightbox__media");
       this._nextOrPrevMedia = document.createElement("img");
       this._nextOrPrevMedia.classList.add("lightbox__media");
+      this._nextOrPrevMedia.setAttribute("alt", "");
     } else if (this._gallery[this._position].includes(".mp4")) {
       this._nextOrPrevMedia = document.createElement("video");
       this._nextOrPrevMedia.classList.add("lightbox__media");
       this._nextOrPrevMedia.setAttribute("autoplay", "");
       this._nextOrPrevMedia.setAttribute("loop", "");
       this._nextOrPrevMedia.setAttribute("controls", "");
+      this._nextOrPrevMedia.setAttribute("alt", "");
       this._toRemove = document.querySelector("figure .lightbox__media");
     }
 

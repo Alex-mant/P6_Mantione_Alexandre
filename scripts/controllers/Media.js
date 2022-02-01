@@ -28,14 +28,14 @@ export class Media {
 
     image(){
         this._image = `        
-            <img role="image" alt="${this._title}" src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">     
+            <img alt="${this._title}" src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">     
         `
         this.init(this._image);
     }
 
     video(){
         this._video = `            
-            <video role="video" alt="${this._title}" src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">            
+            <video alt="${this._title}" src="./assets/albums/${this._nameOfPhotographer}/${this._url}" class="media-imgnvideo">            
         `     
         this.init(this._video);
     }
