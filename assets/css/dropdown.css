@@ -5,6 +5,7 @@
 .filter-container{
     position: absolute;
     top: 50px;
+    left: 65px;
     display: flex;
     width: 220px;
     justify-content: space-between;
