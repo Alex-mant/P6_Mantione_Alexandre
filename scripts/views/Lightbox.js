@@ -82,9 +82,9 @@ export class Lightbox {
     this._dom.classList.add("lightbox__container");
 
     if (this._media.video) {
-      this._typeOfMedia = `<video class="lightbox__media" src="${this._mediaUrl}" loop autoplay controls mute </video>`;
+      this._typeOfMedia = `<video  tabindex="0" class="lightbox__media" alt="${this._media.title}" src="${this._mediaUrl}"  loop autoplay controls mute </video>`;
     } else if (this._media.image) {
-      this._typeOfMedia = `<img class="lightbox__media" src="${this._mediaUrl}" alt="${this._media.title}">`;
+      this._typeOfMedia = `<img tabindex="0" class="lightbox__media" alt="${this._media.title}" src="${this._mediaUrl}" >`;
     }
   
     this._dom.innerHTML = `     

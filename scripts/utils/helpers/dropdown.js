@@ -17,8 +17,8 @@ optContainer.addEventListener("click", () => {
         opt2.setAttribute("tabindex",0);
         opt3.setAttribute("tabindex",0);
     } else {
-        opt2.removeAttribute("tabindex",0);
-        opt3.removeAttribute("tabindex",0);
+        opt2.setAttribute("tabindex",-1);
+        opt3.setAttribute("tabindex",-1);
     }
 });
 

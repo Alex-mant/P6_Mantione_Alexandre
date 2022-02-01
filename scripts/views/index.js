@@ -1,7 +1,7 @@
-import { Mydata } from "./entity/MyData.js";
+import { Mydata } from "../entity/MyData.js";
 
 // Création dynamique des cartes de photographes
-const photographeDisplay = async () => {
+export const photographeDisplay = async () => {
   const data = new Mydata();
   await data.initData();
   const photographer = data.getAllPhotographers();
@@ -27,5 +27,3 @@ const photographeDisplay = async () => {
     )
     .join(""); // Supression des virgules présent sur l'écran
 };
-
-photographeDisplay();

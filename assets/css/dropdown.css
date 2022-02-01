@@ -61,9 +61,17 @@ img.reverseArrow{
     top: 42.5px;
 }
 
+.options-container button {
+    background-color: #901C1C ;
+    color: #ffffff;
+    border: none;
+    width: fit-content;
+    font-size: 17px;
+}
+
 .opt2, .opt3{
     position: absolute;
-    left: 15px;
+    left: 10px;
     background-color: #901C1C;
     width: 115px;
     cursor: pointer;
@@ -71,11 +79,11 @@ img.reverseArrow{
 }
 .opt2{
     content:"option2";
-    top: 50px;
+    top: 55px;
 }
 .opt3{
     content: "option3";    
-    top: 92px;  
+    top: 97px;  
 }
 
 .subMenuBorders::before,.subMenuBorders::after{
