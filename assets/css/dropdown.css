@@ -66,6 +66,7 @@ img.reverseArrow{
     background-color: #901C1C;
     width: 115px;
     cursor: pointer;
+    color: #ffffff;
 }
 .opt2{
     content:"option2";
