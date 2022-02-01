@@ -1,5 +1,3 @@
-import { refreshGallery } from "./refreshGallery.js";
-
 export const filterBy = (medias) => {
   const currentOpt = document.querySelector(".currentOpt");
   const opt2 = document.querySelector(".opt2");

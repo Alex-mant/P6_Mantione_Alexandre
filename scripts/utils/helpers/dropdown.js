@@ -1,5 +1,3 @@
-import { getRuleWithSelector } from "./getRulesWithSelector.js";
-
 const filterContainer = document.querySelector(".filter-container");
 const optContainer = document.querySelector(".options-container");
 const dropDownArrow = document.querySelector(".arrow");
@@ -28,15 +26,12 @@ options.forEach((opt) => {
         let switchOpt;
         let switchCurrent = currentOpt.innerHTML
 
-        switchOpt = opt.innerHTML;        
-        opt.children[0].id = switchCurrent;
-        opt.innerHTML = switchCurrent;
-        opt.htmlFor = switchCurrent;
+        switchOpt = opt.innerText;        
+        opt.innerText = switchCurrent;
+        opt.name = switchCurrent;
 
-        currentOpt.children[0].id = switchOpt;
-        currentOpt.innerHTML = switchOpt;
-        currentOpt.htmlFor = switchOpt;
-        
+        currentOpt.innerText = switchOpt;
+        currentOpt.name = switchOpt;        
     })
 });
 
