@@ -134,7 +134,7 @@ const reset = () => {
   setInputsValue();
   updateSubmitBtn();
   const resetElements = document.querySelectorAll(".form_container form input");
-  document.querySelectorAll(".form_container form input").forEach((input) => { 
+  document.querySelectorAll(".form_input").forEach((input) => { 
     input.value = ""
     if (input.value === "") {
       input.classList.remove("border_sucess");
