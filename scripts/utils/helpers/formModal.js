@@ -1,4 +1,5 @@
 import { Mydata } from "../../entity/MyData.js";
+import { regExpEmail, regExpName } from "../constants/regexp-handler.js";
 import { notWithTab, withTab } from "./notWithTab.js";
 
 /* APPARITION FORMULAIRE ET ASSIGNATION DU PHOTOGRAPHE */
@@ -58,8 +59,7 @@ export const openForm = () => {
 export const closeForm = () => {
   const btnCloseForm = document.querySelector(".form_closeBtn button");
   btnCloseForm.addEventListener("click", () => {
-    document.querySelector(".modal").style.display = "none";
-    withTab();
+    close();
   });
 };
 
@@ -69,22 +69,21 @@ const onKeyUp = (e) => {
   }
 }
 
-const close = (e) => {
-  e.preventDefault();
+const close = () => {
   window.setTimeout(() => {
     document.querySelector(".modal").style.display ="none"
-  }, 500);
-    document.removeEventListener("keyup", onKeyUp);
+  }, 325);
+  withTab();
+  document.removeEventListener("keyup", onKeyUp);
 }
 
 const validInputs = {
-  firstName: false,
-  lastName: false,
+  name: false,
+  surname: false,
   email: false,
   message : false
 };
 
-const everyInputIsValid = () => Object.values(validInputs).every((input) => input === true);
 
 const isValidFormFields = (element, regExp, errorElement, keyName) => {
   element.addEventListener("input", () => {
@@ -99,25 +98,43 @@ const isValidFormFields = (element, regExp, errorElement, keyName) => {
       element.classList.add("border_error");
       errorElement.style.display = "block";
     }
-    updateSubmitButton();
+    updateSubmitBtn();
   });
 };
 
+const everyInputIsValid = () => Object.values(validInputs).every((input) => input === true);
+
 /* SUBMITBUTTON */
 const updateSubmitBtn = () => {
-  /*enabled*/
-  document.querySelector(".form_submitBtn").disabled = false
-  document.querySelector(".form_submitBtn").classList.replace("submit_disabled","submit_enabled");
-  /*disabled*/
-  document.querySelector(".form_submitBtn").disabled = true
-  document.querySelector(".form_submitBtn").classList.replace("submit_enabled","submit_disabled");
-  
+  if (everyInputIsValid() === true){
+    document.querySelector(".form_submitBtn").enabled = true
+    document.querySelector(".form_submitBtn").classList.replace("submit_disabled","submit_enabled");
+  } else {
+    /*disabled*/
+    document.querySelector(".form_submitBtn").disabled = true
+    document.querySelector(".form_submitBtn").classList.replace("submit_enabled","submit_disabled");
+  }  
 }
 
 export const submitForm = () => {
   const btnSubmitForm = document.querySelector(".form_submitBtn");
   btnSubmitForm.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(userLogs);    
+    console.log(userLogs);
+    close();  
   });
 };
+
+
+const name = document.querySelector("input#name");
+const errorName = document.querySelector(".error-fName");
+
+const surname = document.querySelector("input#surname");
+const errorSurname = document.querySelector(".error-lName");
+
+const email = document.querySelector("input#email");
+const errorEmail = document.querySelector(".error-eMail");
+
+isValidFormFields(name, regExpName, errorName, name);
+isValidFormFields(surname, regExpName, errorSurname, surname);
+isValidFormFields(email, regExpEmail, errorEmail, email);

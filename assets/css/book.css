@@ -33,7 +33,7 @@ header{
 
 
 form{
-    width: 300px;
+    width: 495px;
     overflow: hidden;
 }
 
@@ -52,7 +52,7 @@ form h2{
 }
 
 .form_container{
-    width: 380px;
+    width: 550px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -60,6 +60,10 @@ form h2{
     padding-bottom: 25px;
     background-color: #DB8876;
     border-radius: 5px;
+}
+
+.form_container label {
+    font-size: 24px;
 }
 
 .form_text{
@@ -82,7 +86,7 @@ form h2{
 
 .form_input{
     width: 97%;
-    height: 20px;
+    height: 34px;
     border: 1px solid #0000;
     border-radius: 3px;
 }
@@ -242,4 +246,31 @@ figcaption button{
     top: 50%;
     left: 50%;
     transform: translate(-50%);
+}
+
+/*modal Form*/
+.border_sucess{
+    border: 2px solid rgb(70, 156, 20);
+}
+.border_error{
+    border: 2px solid rgb(255, 0, 0)
+}
+
+.error-fName,
+.error-lName,
+.error-eMail{
+    margin: 5px;
+    color: red;
+    font-size: 14px;
+    display: none;
+    font-weight: bold;
+}
+
+.placement-error{
+    display: flex;
+    justify-content: space-between;
+}
+
+span.error-fName {
+    align-self: center;
 }
