@@ -26,7 +26,8 @@ options.forEach((opt) => {
         let switchOpt;
         let switchCurrent = currentOpt.innerHTML
 
-        switchOpt = opt.innerText;        
+        switchOpt = opt.innerText;
+
         opt.innerText = switchCurrent;
         opt.name = switchCurrent;
 

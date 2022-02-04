@@ -14,7 +14,7 @@ export const photographeDisplay = async () => {
         <article class="index_card">
                 <!-- envoi l'id dans l'url -->
             <a href="book.html?id=${allPhotograph.id}">
-                <img class="index_profile" alt="${allPhotograph.name}" src="${allPhotograph.portrait}"></img>
+                <img class="index_profile" alt="photographe" src="${allPhotograph.portrait}"></img>
                 <h2>${allPhotograph.name}</h2>
             </a>
             <p class="index_description">

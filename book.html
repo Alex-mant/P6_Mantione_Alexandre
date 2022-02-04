@@ -18,7 +18,7 @@
       > 
     </header>
     <main id="main">
-      <section id="photograph-book_header">
+      <section tabindex ="0" id="photograph-book_header">
         <div class="photograph_card">
           <h2 class="photograph-book_name">Name of photographer</h2>
           <span class="photograph-book_location"> </span>
@@ -33,7 +33,7 @@
         <div class="filter-container">
           <h3>Trier par</h3>
           <div class="options-container selected">
-            <button class="currentOpt" tabindex="0"  name="Popularité">Popularité</button>
+            <button class="currentOpt" tabindex="0" name="Popularité">Popularité</button>
 
             <button class="opt2" tabindex="-1" name="Date">Date</button>
 
@@ -61,21 +61,21 @@
             <h2 class="form_title">Contactez-moi</h2>
             <label for="name">
               <div class="placement-error"><span class="form_text">Prénom</span><span class="error-fName">Veuillez entrer votre prénom - 2 caratères minimum</span></div>
-              <input id="name" class="form_input" type="text" />
+              <input id="name" class="form_input" type="text"/>
             </label>
             <label for="surname">
               <div class="placement-error"><span class="form_text">Nom</span><span class="error-lName">Veuillez entrer votre nom - 2 caratères minimum</span></div>
-              <input id="surname" class="form_input" type="text" />
+              <input id="surname" class="form_input" type="text"/>
             </label>
             <label for="email">
               <div class="placement-error"><span class="form_text">Email</span> <span class="error-eMail">Veuillez entrer une adresse mail valide</span></div>
-              <input id="email" class="form_input" type="text" />
+              <input id="email" class="form_input" type="text"/>
             </label>
             <label for="message">
               <span class="form_text">Votre message</span>
               <textarea id="message" class="form_input message"></textarea>
             </label>
-            <br /><br />
+            <br/><br/>
             <button  class="form_submitBtn submit_disabled" type="submit" disabled>Envoyer</button>
             <span class="form_closeBtn">
               <button type="button" class="closeModal" name="closeModal"><img  src="./assets/icons/close.svg" alt="close" /></button>
