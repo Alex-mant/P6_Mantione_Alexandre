@@ -13,7 +13,7 @@ export class Media {
         document.querySelector(".mediaGallery").append(this._figure);
         this._figure.innerHTML =
         `
-        <a class="myMedia" href="./assets/albums/${this._nameOfPhotographer}/${this._url}">${media}</a>
+        <a aria-label="${this._title}" class="myMedia" href="./assets/albums/${this._nameOfPhotographer}/${this._url}">${media}</a>
         <figcaption class="media-titlesnlikes">
         <span class="media-titles">${this._title}</span>
         <span class="media-likes">
