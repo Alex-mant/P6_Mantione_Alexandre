@@ -7,9 +7,7 @@ export const photographeDisplay = async () => {
   const photographer = data.getAllPhotographers();
 
   // Création d'une boucle afin de creer du contenu HTML pour chaque itération des objets contenu dans les données récuperés
-  document.querySelector(".photographer_section").innerHTML = photographer
-    .map(
-      (allPhotograph) =>
+  document.querySelector(".photographer_section").innerHTML = photographer.map((allPhotograph) =>
         `
         <article class="index_card">
                 <!-- envoi l'id dans l'url -->
@@ -20,10 +18,9 @@ export const photographeDisplay = async () => {
             <p class="index_description">
                 <span class="index_location">${allPhotograph.city}, ${allPhotograph.country}</span>
                 <span class="index_tagline">${allPhotograph.tagline}</span>
-                <span class="index_price">${Math.round(allPhotograph.price / 8)}€/heure</span>
+                <span class="index_price">${Math.round(allPhotograph.price / 7)}€/heure</span>
             <p>
         </article>    
     `
-    )
-    .join(""); // Supression des virgules présent sur l'écran
+    ).join("") // Supression des virgules présent sur l'écran
 };

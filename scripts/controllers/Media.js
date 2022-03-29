@@ -13,15 +13,18 @@ export class Media {
         document.querySelector(".mediaGallery").append(this._figure);
         this._figure.innerHTML =
         `
-        <a aria-label="${this._title}" class="myMedia" href="./assets/albums/${this._nameOfPhotographer}/${this._url}">${media}</a>
+        <a aria-label="${this._title}" class="myMedia" href="./assets/albums/${this._nameOfPhotographer}/${this._url}">
+            ${media}
+        </a>
+        
         <figcaption class="media-titlesnlikes">
-        <span class="media-titles">${this._title}</span>
-        <span class="media-likes">
-        <span class="counter">${this._likes}</span>
-        <button role="boutton" aria-label="like" class="unliked">
-        <i aria-hidden="true" class="fas fa-heart"></i>
-        </button>
-        </span>
+            <span class="media-titles">${this._title}</span>
+            <span class="media-likes">
+                <span class="counter">${this._likes}</span>
+                <button role="boutton" aria-label="like" class="unliked">
+                    i aria-hidden="true" class="fas fa-heart"></i>
+                </button>
+            </span>
         </figcaption>
         `
     }
